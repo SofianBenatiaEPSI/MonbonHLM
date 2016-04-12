@@ -1,0 +1,14 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+monbon_hlm_home:
+    resource: "@MonbonHLMHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+monbon_hlm_dashboard:
+    resource: "@MonbonHLMDashboardBundle/Resources/config/routing.yml"
+    prefix:   /
+
+monbonhlm_user:
+    resource: "@MonbonHLMUserBundle/Resources/config/routing.yml"
+    prefix:   /

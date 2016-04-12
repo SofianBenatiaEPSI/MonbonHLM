@@ -1,0 +1,7 @@
+monbon_hlm_dashboard_homepage:
+    path:     /dashboard
+    defaults: { _controller: MonbonHLMDashboardBundle:Accueil:index }
+
+monbon_hlm_dashboard_ajouter_quartier:
+    path:     /ajouter-quartier
+    defaults: { _controller: MonbonHLMDashboardBundle:Quartier:Ajouter }

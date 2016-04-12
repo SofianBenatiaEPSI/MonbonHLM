@@ -1,0 +1,15 @@
+monbon_hlm_home_homepage:
+    path:     /
+    defaults: { _controller: MonbonHLMHomeBundle:Accueil:index }
+
+monbon_hlm_home_annonce_accueil:
+    path:     /
+    defaults: { _controller: MonbonHLMDashboardBundle:Annonce:Recupererdeux }
+
+monbon_hlm_home_annonces:
+    path:     /annonces
+    defaults: { _controller: MonbonHLMHomeBundle:Annonce:Recuperer, page: 1 }
+
+monbon_hlm_home_ajouter_annonce:
+    path:     /ajouter-annonce
+    defaults: { _controller: MonbonHLMHomeBundle:Annonce:Ajouter }

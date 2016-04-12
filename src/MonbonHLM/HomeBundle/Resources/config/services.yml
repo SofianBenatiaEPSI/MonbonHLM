@@ -1,0 +1,4 @@
+services:
+#    monbon_hlm_home.example:
+#        class: MonbonHLM\HomeBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
