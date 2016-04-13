@@ -12,4 +12,38 @@ use Doctrine\ORM\EntityRepository;
  */
 class BailleurRepository extends EntityRepository
 {
+    public function Recupererbailleurs($page=1, $maxperpage=6) {
+        $query = $this->createQueryBuilder('i')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
+    public function Recupererbailleursaccueil($page=1, $maxperpage=12) {
+        $query = $this->createQueryBuilder('i')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
+    public function countbailleursTotal()
+    {
+        $qb = $this->createQueryBuilder('k');
+        $qb->select('count(k)');
+
+        $totalbailleurs = $qb->getQuery()->getSingleScalarResult();
+        return $totalbailleurs;
+    }
+
+    public function RecupererbailleursParId($id)
+    {
+        $bailleurs = parent::find($id);
+        return $bailleurs;
+    }
 }

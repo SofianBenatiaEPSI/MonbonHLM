@@ -3,6 +3,7 @@
 namespace MonbonHLM\DashboardBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * AnnonceRepository
@@ -13,6 +14,16 @@ use Doctrine\ORM\EntityRepository;
 class AnnonceRepository extends EntityRepository
 {
     public function Recupererannonce($page=1, $maxperpage=9) {
+        $query = $this->createQueryBuilder('i')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
+    public function Recupererannonceaccueil($page=1, $maxperpage=12) {
         $query = $this->createQueryBuilder('i')
             ->addOrderBy('i.id', 'DESC')
             ->getQuery()

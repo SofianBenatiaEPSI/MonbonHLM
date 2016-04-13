@@ -17,73 +17,7 @@
     {% include "::menu.html.twig" %}
     <div class="clearfix"></div>
 
-
-    <!-- Slider
-    ================================================== -->
-
-    <!-- Revolution Slider -->
-    <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classicslider1" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-
-        <!-- 5.0.7 auto mode -->
-        <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
-            <ul>
-
-                <!-- Slide  -->
-                <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
-
-                    <!-- Background -->
-                    <img src="{{ asset('home/images/slide-01.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="" />
-
-                    <!-- Caption-->
-                    <div class="tp-caption tp-shape tp-shapewrapper custom-caption tp-resizeme rs-parallaxlevel-0" id="slide-1-layer-1" data-x="['left','left','left','left']" data-hoffset="['0']" data-y="['middle','middle','middle','middle']" data-voffset="['0']" data-width="520" data-height="auto" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:0;opacity:0;s:1000;e:Power2.easeOutExpo;s:400;e:Power2.easeOutExpo" data-transform_out="" data-mask_in="x:0px;y:[20%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
-
-                        <!-- Caption Content -->
-                        <div class="caption-title">Carpentry Services</div>
-                        <div class="caption-text">We specialize in a number of framing, trim and finish carpentry services. Our goal is complete satisfaction.</div>
-                        <a href="contact.html" class="button medium">Request Service</a>
-                    </div>
-                </li>
-
-                <!-- Slide  -->
-                <li data-index="rs-2" data-transition="fadefrombottom" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
-
-                    <!-- Background -->
-                    <img src="{{ asset('home/images/slide-02.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="" />
-
-                    <!-- Caption-->
-                    <div class="tp-caption tp-shape tp-shapewrapper custom-caption tp-resizeme rs-parallaxlevel-0" id="slide-2-layer-2" data-x="['left','left','left','left']" data-hoffset="['0']" data-y="['middle','middle','middle','middle']" data-voffset="['0']" data-width="520" data-height="auto" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:0;opacity:0;s:1000;e:Power2.easeOutExpo;s:400;e:Power2.easeOutExpo" data-transform_out="" data-mask_in="x:0px;y:[20%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
-
-                        <!-- Caption Content -->
-                        <div class="caption-title">Interior Painting</div>
-                        <div class="caption-text"> A new coat of paint or is easy ways to refresh your home. We know what makes a great paint job.</div>
-                        <a href="contact.html" class="button medium">Request Service</a>
-                    </div>
-                </li>
-
-                <!-- Slide  -->
-                <li data-index="rs-3" data-transition="fadefromtop" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
-
-                    <!-- Background -->
-                    <img src="{{ asset('home/images/slide-03.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="" />
-
-                    <!-- Caption-->
-                    <div class="tp-caption tp-shape tp-shapewrapper custom-caption tp-resizeme rs-parallaxlevel-0" id="slide-3-layer-3" data-x="['left','left','left','left']" data-hoffset="['0']" data-y="['middle','middle','middle','middle']" data-voffset="['0']" data-width="520" data-height="auto" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:0;opacity:0;s:1000;e:Power2.easeOutExpo;s:400;e:Power2.easeOutExpo" data-transform_out="" data-mask_in="x:0px;y:[20%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
-
-                        <!-- Caption Content -->
-                        <div class="caption-title">Professional Tiling</div>
-                        <div class="caption-text">Highly experienced in residential and commercial tiling, bathroom renevations, waterproofing, silicone work and soundproofing.</div>
-                        <a href="contact.html" class="button medium">Request Service</a>
-                    </div>
-                </li>
-
-
-            </ul>
-            <div class="tp-static-layers"></div>
-
-        </div>
-    </div>
-    <!-- Revolution Slider / End -->
-
+    {% include "::slider.html.twig" %}
 
     <!-- Content
     ================================================== -->
@@ -93,7 +27,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h3 class="headline centered">Featured Services</h3>
+                <h3 class="headline centered">Comment ça fonctionne ?</h3>
             </div>
         </div>
 
@@ -101,61 +35,32 @@
             <div class="col-md-4 col-sm-6">
                 <!-- Service -->
                 <a href="single-service-1.html" class="featured-service">
-                    <i class="reneva icon-37"></i>
-                    <h4>Painting</h4>
-                    <p>A fresh coat of paint can breathe life into any room.</p>
+                    <i class="fa fa-envelope-o"></i>
+                    <h4>Contactez</h4>
+                    <p>Contacter l'annonceur, pour envoyer un message à l'annonceur.</p>
                 </a>
             </div>
 
             <div class="col-md-4 col-sm-6">
                 <!-- Service -->
                 <a href="single-service-2.html" class="featured-service">
-                    <i class="reneva icon-7"></i>
-                    <h4>Repair</h4>
-                    <p>If something is broken in your home, we can fix it.</p>
+                    <i class="reneva icon-48"></i>
+                    <h4>Remplissez</h4>
+                    <p>Remplissez le document télécharge d'échange sur notre site web.</p>
                 </a>
             </div>
 
             <div class="col-md-4 col-sm-6">
                 <!-- Service -->
                 <a href="single-service-1.html" class="featured-service">
-                    <i class="reneva icon-12"></i>
-                    <h4>Carpentry</h4>
-                    <p>We build, construct and install all you need.</p>
-                </a>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-                <!-- Service -->
-                <a href="single-service-2.html" class="featured-service">
-                    <i class="reneva icon-21"></i>
-                    <h4>Plumbing</h4>
-                    <p>Toilet replacement, pipe insulation and more.</p>
-                </a>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-                <!-- Service -->
-                <a href="single-service-1.html" class="featured-service">
-                    <i class="reneva icon-5"></i>
-                    <h4>Remodeling</h4>
-                    <p>Upgrade your home with a few finishing touches.</p>
-                </a>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-                <!-- Service -->
-                <a href="single-service-2.html" class="featured-service">
-                    <i class="reneva icon-30"></i>
-                    <h4>Electrical</h4>
-                    <p>We professionally install electric appliances.</p>
+                    <i class="reneva icon-16"></i>
+                    <h4>Déménagez</h4>
+                    <p>Échanger vos logement une fois l'accord de la comission!</p>
                 </a>
             </div>
         </div>
-
     </div>
     <!-- Featured Services / End -->
-
 
     <!-- Latest Projects -->
     <div class="full-width projects-container">
@@ -167,18 +72,6 @@
                     <!-- Headline -->
                     <h3 class="headline centered">Les dernières annonces</h3>
 
-                    <!-- Filters -->
-                    <div id="filters">
-                        <ul class="option-set alt">
-                            <li><a href="#filter" class="selected" data-filter="*">All</a></li>
-                            <li><a href="#filter" data-filter=".kitchens">Kitchens</a></li>
-                            <li><a href="#filter" data-filter=".bathrooms">Bathrooms</a></li>
-                            <li><a href="#filter" data-filter=".bedrooms">Bedrooms</a></li>
-                            <li><a href="#filter" data-filter=".living-rooms">Living Rooms</a></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -186,176 +79,32 @@
         <!-- Projects -->
         <div class="full-width projects">
 
-            <!-- Item -->
-            <a href="single-project-content-right.html" class="kitchens clickable">
-                <img src="{{ asset('home/images/latest-project-01.jpg')}}" alt="" />
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h4>Kitchenette</h4>
-                        <span>March 2016</span>
+            {% for annonce in annonceaccTab %}
+                <!-- Item -->
+                <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}" class="kitchens clickable">
+                    <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" />
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h4>{{ annonce.quartier.nom }}</h4>
+                            <span>{{ annonce.typelogement.type }}</span>
+                        </div>
                     </div>
-                </div>
-                <div class="plus-icon"></div>
-            </a>
-
-            <!-- Item -->
-            <a href="single-project-before-after.html" class="bathrooms clickable">
-                <img src="{{ asset('home/images/latest-project-02.jpg')}}" alt="" />
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h4>Bathroom</h4>
-                        <span>February 2016</span>
-                    </div>
-                </div>
-                <div class="plus-icon"></div>
-            </a>
-
-            <!-- Item -->
-            <a href="single-project-content-right.html" class="kitchens clickable">
-                <img src="{{ asset('home/images/latest-project-03.jpg')}}" alt="" />
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h4>Kitchen</h4>
-                        <span>January 2016</span>
-                    </div>
-                </div>
-                <div class="plus-icon"></div>
-            </a>
-
-
-            <!-- Item -->
-            <a href="single-project-before-after.html" class="bathrooms clickable">
-                <img src="{{ asset('home/images/latest-project-04.jpg')}}" alt="" />
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h4>Bathroom</h4>
-                        <span>December 2016</span>
-                    </div>
-                </div>
-                <div class="plus-icon"></div>
-            </a>
-
-            <!-- Item -->
-            <a href="single-project-content-right.html" class="bedrooms clickable">
-                <img src="{{ asset('home/images/latest-project-05.jpg')}}" alt="" />
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h4>Living Room</h4>
-                        <span>November 2015</span>
-                    </div>
-                </div>
-                <div class="plus-icon"></div>
-            </a>
-
-            <!-- Item -->
-            <a href="single-project-content-bottom.html" class="bedrooms living-rooms clickable">
-                <img src="{{ asset('home/images/latest-project-06.jpg')}}" alt="" />
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h4>Living Room</h4>
-                        <span>November 2015</span>
-                    </div>
-                </div>
-                <div class="plus-icon"></div>
-            </a>
-
-            <!-- Item -->
-            <a href="single-project-content-right.html" class="living-rooms clickable">
-                <img src="{{ asset('home/images/latest-project-07.jpg')}}" alt="" />
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h4>Living Room</h4>
-                        <span>September 2015</span>
-                    </div>
-                </div>
-                <div class="plus-icon"></div>
-            </a>
-
-            <!-- Item -->
-            <a href="single-project-content-bottom.html" class="living-rooms kitchens clickable">
-                <img src="{{ asset('home/images/latest-project-08.jpg')}}" alt="" />
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h4>Kitchenette</h4>
-                        <span>September 2015</span>
-                    </div>
-                </div>
-                <div class="plus-icon"></div>
-            </a>
+                    <div class="plus-icon"></div>
+                </a>
+            {% endfor %}
 
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="all-projects.html" class="button medium border">Voir toutes les annonces</a>
+                    <a href="{{path ('monbon_hlm_home_annonces')}}" class="button medium border">Toutes les annonces</a>
                 </div>
             </div>
         </div>
 
     </div>
     <div class="clearfix"></div>
-    <!-- Latest Projects / End -->
-
-
-    <!-- Stages -->
-    <div class="container">
-
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="headline centered with-border margin-bottom-0">All Stages of The Renovation</h3>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <!-- Stage -->
-            <div class="col-md-3 col-sm-6">
-                <div class="stage">
-                    <i class="reneva icon-18"></i>
-                    <span>Initial Stage</span>
-                    <h4>Customer Idea</h4>
-                    <p>Curabitur sodales massa velit, id dapibus nunc efficitur at. Quisque elementum magna quis ante suscipit, quis fermentum augue viverra.</p>
-                </div>
-            </div>
-
-            <!-- Stage -->
-            <div class="col-md-3 col-sm-6">
-                <div class="stage">
-                    <i class="reneva icon-44"></i>
-                    <span>Second Stage</span>
-                    <h4>Free Quotation</h4>
-                    <p>Curabitur sodales massa velit, id dapibus nunc efficitur at. Quisque elementum magna quis ante suscipit, quis fermentum augue viverra.</p>
-                </div>
-            </div>
-
-            <!-- Stage -->
-            <div class="col-md-3 col-sm-6">
-                <div class="stage">
-                    <i class="reneva icon-45"></i>
-                    <span>Third Stage</span>
-                    <h4>Cunstruction</h4>
-                    <p>Curabitur sodales massa velit, id dapibus nunc efficitur at. Quisque elementum magna quis ante suscipit, quis fermentum augue viverra.</p>
-                </div>
-            </div>
-
-            <!-- Stage -->
-            <div class="col-md-3 col-sm-6">
-                <div class="stage">
-                    <i class="reneva icon-16"></i>
-                    <span>Final Stage</span>
-                    <h4>Warranty Beyond</h4>
-                    <p>Curabitur sodales massa velit, id dapibus nunc efficitur at. Quisque elementum magna quis ante suscipit, quis fermentum augue viverra.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- Stages / End -->
-
-
-    <!-- Testimonials -->
     <div id="testimonials">
         <!-- Slider -->
         <div class="container">
@@ -391,7 +140,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="headline centered with-border margin-bottom-30">Just some of our happy clients</h3>
+                <h3 class="headline centered with-border margin-bottom-30">LES BAILLEURS</h3>
             </div>
         </div>
 
@@ -400,13 +149,9 @@
 
                 <!-- Carousel -->
                 <div class="logo-carousel">
-                    <div class="item"><img src="{{ asset('home/images/logo-01.png')}}" alt="" /></div>
-                    <div class="item"><img src="{{ asset('home/images/logo-02.png')}}" alt="" /></div>
-                    <div class="item"><img src="{{ asset('home/images/logo-03.png')}}" alt="" /></div>
-                    <div class="item"><img src="{{ asset('home/images/logo-04.png')}}" alt="" /></div>
-                    <div class="item"><img src="{{ asset('home/images/logo-05.png')}}" alt="" /></div>
-                    <div class="item"><img src="{{ asset('home/images/logo-06.png')}}" alt="" /></div>
-                    <div class="item"><img src="{{ asset('home/images/logo-07.png')}}" alt="" /></div>
+                    {% for bailleurs in bailleuraccTab %}
+                    <div class="item"><img src="{{ asset('uploads/bailleurs/'~bailleurs.logo.id~'.'~bailleurs.logo.path) }}" alt="" /></div>
+                    {% endfor %}
                 </div>
 
             </div>
@@ -418,58 +163,7 @@
 
     <!-- Footer
     ================================================== -->
-    <div class="margin-top-35"></div>
-
-    <div id="footer">
-        <!-- Main -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-sm-6">
-                    <h4>About</h4>
-                    <p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
-                    <a href="#" class="button social-btn"><i class="fa fa-facebook-official"></i> Like Us on Facebook</a>
-                </div>
-
-                <div class="col-md-4  col-sm-6">
-                    <h4>Helpful Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Press Releases</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Projects</a></li>
-                    </ul>
-
-                    <ul class="footer-links">
-                        <li><a href="#">In the News</a></li>
-                        <li><a href="#">Our Blog</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3  col-sm-12">
-                    <h4>Contact Us</h4>
-                    <div class="text-widget">
-                        <span>12345 Little Lonsdale St, Melbourne</span> <br />
-                        Phone: <span>(123) 123-456 </span><br />
-                        Fax: <span>(123) 123-456</span> <br />
-                        E-Mail:<span> office@example.com </span><br />
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Copyright -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyrights">©  Copyright 2016 by <a href="#">Reneva</a>. All Rights Reserved.</div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+    {% include "::footer.html.twig" %}
 
     <!-- Back To Top Button -->
     <div id="backtotop"><a href="#"></a></div>

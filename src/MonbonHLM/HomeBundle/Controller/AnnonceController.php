@@ -63,27 +63,46 @@ class AnnonceController extends Controller
         ));
     }
 
-    public function RecupererdeuxAction($page)
+    public function DetailAction($id)
     {
-        $maxannonces = 9;
-
-        $annonce_count = $this->getDoctrine()
-            ->getRepository('MonbonHLMDashboardBundle:Annonce')
-            ->countAnnonceTotal();
-
-        $pagination = array(
-            'page' => $page,
-            'route' => 'monbon_hlm_home_annonces',
-            'pages_count' => ceil($annonce_count / $maxannonces),
-            'route_params' => array()
-        );
-
-        $annonceTab = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce')
-            ->Recupererannonce($page, $maxannonces);
-
-        return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
-            'annonceTab' => $annonceTab,
-            'pagination' => $pagination
-        ));
+        $cours = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce');
+        $annoncedet = new \MonbonHLM\DashboardBundle\Entity\Annonce();
+        $annoncedet = $cours->RecupererAnnonceParId($id);
+        return $this->render('MonbonHLMHomeBundle:Annonce:detailsannonce.html.twig', array('annonce' => $annoncedet));
     }
+
+    public function ModifierAction($id)
+    {
+        $annonce = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce');
+        $annoncedet = $annonce->RecupererAnnonceParId($id);
+
+        $form = $this->createForm(new AnnonceType(), $annoncedet);
+
+        if ($this->get('request')->getMethod() == 'POST'){
+            //On récupére les données du formulaire
+            $form->bind($this->get('request'));
+            if ($form->isValid())
+            {
+                $em = $this->getDoctrine()->getManager();
+                $annoncedet->setReferencebailleur($form["reference_bailleur"]->getData());
+                $annoncedet->setQuartier($form["quartier"]->getData());
+                $annoncedet->setCodepostal($form["code_postal"]->getData());
+                $annoncedet->setPhoto2($form["photo_2"]->getData());
+                $annoncedet->setPhoto3($form["photo_3"]->getData());
+                $annoncedet->setTypelogement($form["type_logement"]->getData());
+                $annoncedet->setReferencelocataire($form["reference_locataire"]->getData());
+                $annoncedet->setAdresse($form["adresse"]->getData());
+                $annoncedet->setEtage($form["etage"]->getData());
+                $annoncedet->setNumerologement($form["numero_logement"]->getData());
+                $annoncedet->setDescriptioncomplementaire($form["description_complementaire"]->getData());
+                $annoncedet->setPhotoPrincipal($form["photo_principal"]->getData());
+                $em->persist($annoncedet);
+                $em->flush();
+                return new RedirectResponse($this->generateUrl('monbon_hlm_dashboard_homepage'));
+            }
+        }
+        return $this->render('MonbonHLMHomeBundle:Annonce:modifierannonce.html.twig',  array('form'=>$form->createView()));
+    }
+
+
 }

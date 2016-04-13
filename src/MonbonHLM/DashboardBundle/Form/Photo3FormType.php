@@ -7,7 +7,7 @@ class Photo3FormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-            ->add('file', 'file', array('label' => false));
+            ->add('file', 'file', array('label' => false, 'required' => false));
 
     }
     public function setDefaultOptions(OptionsResolverInterface $resolver)

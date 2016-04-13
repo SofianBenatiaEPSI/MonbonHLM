@@ -1,18 +1,27 @@
+######################  ANNONCES  #####################################
+
 monbon_hlm_home_homepage:
     path:     /
-    defaults: { _controller: MonbonHLMHomeBundle:Accueil:index }
-
-monbon_hlm_home_annonce_accueil:
-    path:     /
-    defaults: { _controller: MonbonHLMDashboardBundle:Annonce:Recupererdeux }
+    defaults: { _controller: MonbonHLMHomeBundle:Accueil:Recuperer }
 
 monbon_hlm_home_annonces:
-    path:     /annonces
+    path:     /annonces/{page}
     defaults: { _controller: MonbonHLMHomeBundle:Annonce:Recuperer, page: 1 }
+
+monbon_hlm_home_details_annonces:
+    path:     /annonce-{id}
+    defaults: { _controller: MonbonHLMHomeBundle:Annonce:Detail }
 
 monbon_hlm_home_ajouter_annonce:
     path:     /ajouter-annonce
     defaults: { _controller: MonbonHLMHomeBundle:Annonce:Ajouter }
+
+monbon_hlm_home_modifier_annonce:
+    path:     /modifier-annonce-{id}
+    defaults: { _controller: MonbonHLMHomeBundle:Annonce:Modifier }
+
+
+######################  QUARTIERS  #####################################
 
 
 monbon_hlm_home_quartier:
@@ -22,3 +31,15 @@ monbon_hlm_home_quartier:
 monbon_hlm_home_ajouter_quartier:
     path:     /ajouter-quartier
     defaults: { _controller: MonbonHLMHomeBundle:Quartier:Ajouter }
+
+
+######################  BAILLEURS  #####################################
+
+
+monbon_hlm_home_bailleurs:
+    path:     /bailleurs
+    defaults: { _controller: MonbonHLMHomeBundle:Bailleurs:Index, page: 1 }
+
+monbon_hlm_home_modifier_bailleur:
+    path:     /modifierbailleur-{id}
+    defaults: { _controller: MonbonHLMHomeBundle:Bailleurs:modifierbailleur }

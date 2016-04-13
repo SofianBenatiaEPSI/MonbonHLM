@@ -22,15 +22,14 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <h2>All Projects</h2>
+                    <h2>Toutes les annonces</h2>
                     <!-- <span>Tagline</span> -->
 
                     <!-- Breadcrumbs -->
                     <nav id="breadcrumbs">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li>All Projects</li>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">Annonces</a></li>
                         </ul>
                     </nav>
 
@@ -43,23 +42,6 @@
     <!-- Content
     ================================================== -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <!-- Filters -->
-                <div id="filters">
-                    <ul class="option-set margin-bottom-40">
-                        <li><a href="#filter" class="selected" data-filter="*">All</a></li>
-                        <li><a href="#filter" data-filter=".kitchens">Kitchens</a></li>
-                        <li><a href="#filter" data-filter=".bathrooms">Bathrooms</a></li>
-                        <li><a href="#filter" data-filter=".bedrooms">Bedrooms</a></li>
-                        <li><a href="#filter" data-filter=".living-rooms">Living Rooms</a></li>
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
-
-            </div>
-        </div>
 
         <div class="row">
 
@@ -68,8 +50,8 @@
                 {% for annonce in annonceTab %}
                 <!-- Item -->
                 <div class="isotope-item col-md-4 col-sm-6 kitchens">
-                    <a href="single-project-content-right.html">
-                        <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" />
+                    <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}">
+                        <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" style="min-width: 500px; height: auto;"/>
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h4>{{ annonce.quartier.nom }}</h4>
@@ -81,67 +63,12 @@
                 </div>
                 {% endfor %}
             </div>
+            {% include 'MonbonHLMHomeBundle:Pagination:pagination.html.twig' %}
 
         </div>
     </div>
 
-
-
-
-    <!-- Footer
-    ================================================== -->
-    <div class="margin-top-30"></div>
-
-    <div id="footer">
-        <!-- Main -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-sm-6 col-xs-12">
-                    <h4>About</h4>
-                    <p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
-                    <a href="#" class="button social-btn"><i class="fa fa-facebook-official"></i> Like Us on Facebook</a>
-                </div>
-
-                <div class="col-md-4  col-sm-6 col-xs-12">
-                    <h4>Helpful Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Press Releases</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Projects</a></li>
-                    </ul>
-
-                    <ul class="footer-links">
-                        <li><a href="#">In the News</a></li>
-                        <li><a href="#">Our Blog</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3  col-sm-12 col-xs-12">
-                    <h4>Contact Us</h4>
-                    <div class="text-widget">
-                        <span>12345 Little Lonsdale St, Melbourne</span> <br />
-                        Phone: <span>(123) 123-456 </span><br />
-                        Fax: <span>(123) 123-456</span> <br />
-                        E-Mail:<span> office@example.com </span><br />
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Copyright -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyrights">©  Copyright 2016 by <a href="#">Reneva</a>. All Rights Reserved.</div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+    {% include "::footer.html.twig" %}
 
     <!-- Back To Top Button -->
     <div id="backtotop"><a href="#"></a></div>

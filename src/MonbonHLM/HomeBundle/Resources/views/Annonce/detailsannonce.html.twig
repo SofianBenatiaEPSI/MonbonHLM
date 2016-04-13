@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+ ================================================== -->
+    <meta charset="utf-8" />
+    <title>Annonces</title>
+    {% include "::base.html.twig" %}
+</head>
+
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+    {% include "::menu.html.twig" %}
+
+    <!-- Titlebar
+    ================================================== -->
+    <div id="titlebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <span>Annonce numéro {{ annonce.id }}</span>
+                    <!-- <span>Tagline</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Content
+    ================================================== -->
+    <div class="container">
+        <div class="row sticky-wrapper">
+
+            <!-- Photos -->
+            <div class="col-md-8 sticky-wrapper">
+                <div class="photoGrid big clearfix ">
+                    <a class="item img-hover mfp-gallery" href="{{ asset('uploads/annonces/1/'~annonce.photoprincipal.id~'.'~annonce.photoprincipal.path) }}" title="Photo de l'annonce"><img src="{{ asset('uploads/annonces/1/'~annonce.photoprincipal.id~'.'~annonce.photoprincipal.path) }}" alt="" /></a>
+                    <a class="item img-hover mfp-gallery" href="{{ asset('uploads/annonces/2/'~annonce.photo2.id~'.'~annonce.photo2.path) }}"><img src="{{ asset('uploads/annonces/2/'~annonce.photo2.id~'.'~annonce.photo2.path) }}" alt="" /></a>
+                    <a class="item img-hover mfp-gallery" href="{{ asset('uploads/annonces/3/'~annonce.photo3.id~'.'~annonce.photo3.path) }}"><img src="{{ asset('uploads/annonces/3/'~annonce.photo3.id~'.'~annonce.photo3.path) }}" alt="" /></a>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="col-md-4">
+                <div class="project-details sticky">
+                    <h4 class="headline with-border">Annonce numéro {{ annonce.id }}</h4>
+                    <p>{{ annonce.descriptioncomplementaire }}</p>
+
+                    <ul class="details">
+                        <li><span>Référence locataire :</span>
+                        </li>
+                        <li><span>Type de logement :</span> {{ annonce.typelogement.type }}</li>
+                        <li><span>Adresse :</span> {{ annonce.adresse }}</li>
+                        <li><span>Etage :</span> {{ annonce.etage }}</li>
+                        <li><span>Quartier :</span> <a href="#"> {{ annonce.quartier.nom }}</a></li>
+                        <li><span>Bailleur :</span> <a href="#"> {{ annonce.referencebailleur.nom }}</a></li>
+                        <li><span>Numéro de logement :</span> {{ annonce.numerologement }}</li>
+                        <li><span>Code postal :</span> {{ annonce.codepostal.code }}</li>
+                    </ul>
+
+
+                    <h4 class="headline with-border" style="margin-top: 100px;">Infos de l'annonceur</h4>
+                    {% if is_granted('ROLE_USER') %}
+                        <ul class="details">
+                            <li><span>Nom :</span> {{ annonce.auteur.nom }}</li>
+                            <li><span>Prenom :</span> {{ annonce.auteur.prenom }}</li>
+                            <li><span>Telephone :</span> {{ annonce.auteur.telephone }}</li>
+                            <li><a href="#" class="button border"><i class="fa fa-envelope"></i> Echanger !</a></li>
+                        </ul>
+                    {% else %}
+                        <span>Vous devez être connecter et avoir posté une annonce pour avoir les infos de l'annonceur</span>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer
+   {% include "::footer.html.twig" %}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+
+    {% include "::scripts.html.twig" %}
+</div>
+<!-- Wrapper / End -->
+
+</body>
+</html>

@@ -12,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Logo_bailleur
 {
+
     /**
      * @var integer
      *
@@ -58,7 +59,7 @@ class Logo_bailleur
     }
     protected function getUploadDir()
     {
-        return 'uploads/logos_bailleur';
+        return 'uploads/profilePic';
     }
     private $filenameForRemove;
     /**
@@ -68,7 +69,9 @@ class Logo_bailleur
     public function preUpload()
     {
         if (null !== $this->file) {
-            $this->path = $this->file->guessExtension();
+            // do whatever you want to generate a unique name
+            $filename = sha1(uniqid(mt_rand(), true));
+            $this->path = $filename.'.'.$this->file->guessExtension();
         }
     }
     /**
@@ -112,7 +115,7 @@ class Logo_bailleur
      *
      * @param string $path
      *
-     * @return Logo
+     * @return ProfilePic
      */
     public function setPath($path)
     {
