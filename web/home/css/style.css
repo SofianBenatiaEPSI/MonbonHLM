@@ -71,7 +71,7 @@
 /* ------------------------------------------------------------------- */
 /* 01. Import Section
 ---------------------------------------------------------------------- */
-@import url("bootstrap.css");					/* Dasboard Reset, Typography, Forms, Responsive Grid etc. */
+@import url("bootstrap.css");					/* Dashboard Reset, Typography, Forms, Responsive Grid etc. */
 @import url("icons.css");						/* Webfont Icons: FontAwesome, Line, Simple Line */
 @import url("revolutionslider.css");			/* Revolution Slider Style Sheets */
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");

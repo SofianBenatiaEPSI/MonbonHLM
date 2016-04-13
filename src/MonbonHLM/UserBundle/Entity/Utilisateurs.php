@@ -78,11 +78,11 @@ class Utilisateurs extends BaseUser
     }
 
     /**
-     * @param string $prénom
+     * @param string $prenom
      */
     public function setPrenom($prenom)
     {
-        $this->prénom = $prenom;
+        $this->prenom = $prenom;
     }
 
     /**

@@ -13,3 +13,12 @@ monbon_hlm_home_annonces:
 monbon_hlm_home_ajouter_annonce:
     path:     /ajouter-annonce
     defaults: { _controller: MonbonHLMHomeBundle:Annonce:Ajouter }
+
+
+monbon_hlm_home_quartier:
+    path:     /quartiers
+    defaults: { _controller: MonbonHLMHomeBundle:Quartier:Index, page: 1 }
+
+monbon_hlm_home_ajouter_quartier:
+    path:     /ajouter-quartier
+    defaults: { _controller: MonbonHLMHomeBundle:Quartier:Ajouter }

@@ -23,13 +23,16 @@ class AnnonceType extends AbstractType {
         $builder
             ->add('reference_locataire', 'text', array('attr' => array('class' => 'Nom')))
             ->add('reference_bailleur', 'entity', array('class'=>'MonbonHLMDashboardBundle:Bailleur', 'property' => 'nom' ))
+            ->add('type_logement', 'entity', array('class'=>'MonbonHLMDashboardBundle:TypeLogement', 'property' => 'type' ))
             ->add('quartier', 'entity', array('class'=>'MonbonHLMDashboardBundle:Quartier', 'property' => 'nom' ))
             ->add('adresse', 'text', array('attr' => array('class' => 'adresse')))
-            ->add('code_postal', 'entity', array('class'=>'MonbonHLMDashboardBundle:CodePostal', 'property' => 'nom' ))
+            ->add('code_postal', 'entity', array('class'=>'MonbonHLMDashboardBundle:CodePostal', 'property' => 'code' ))
             ->add('etage', 'text', array('attr' => array('class' => 'etage')))
             ->add('numero_logement', 'text', array('attr'=> array('class'=> 'numero_logement')))
             ->add('description_complementaire', 'textarea', array('attr'=> array('class'=> 'description_complementaire')))
-            ->add('photos', new Photos_logementFormType(), array('label' => 'Photos du logement :'))
+            ->add('photo_principal', new PhotoPrincipalFormType(), array('label' => 'Photo principal du logement :'))
+            ->add('photo_2', new Photo2FormType(), array('label' => 'Photo 2 du logement :'))
+            ->add('photo_3', new Photo3FormType(), array('label' => 'Photo 3 du logement :'))
             ->add('envoyer', 'submit');
     }
 

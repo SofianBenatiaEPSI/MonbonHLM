@@ -12,7 +12,7 @@ use Doctrine\ORM\EntityRepository;
  */
 class AnnonceRepository extends EntityRepository
 {
-    public function Recupererannonce($page=1, $maxperpage=6) {
+    public function Recupererannonce($page=1, $maxperpage=9) {
         $query = $this->createQueryBuilder('i')
             ->addOrderBy('i.id', 'DESC')
             ->getQuery()
@@ -27,13 +27,13 @@ class AnnonceRepository extends EntityRepository
         $qb = $this->createQueryBuilder('k');
         $qb->select('count(k)');
 
-        $totalentreprises = $qb->getQuery()->getSingleScalarResult();
-        return $totalentreprises;
+        $totalannonces = $qb->getQuery()->getSingleScalarResult();
+        return $totalannonces;
     }
 
     public function RecupererAnnonceParId($id)
     {
-        $entreprise = parent::find($id);
-        return $entreprise;
+        $annonce = parent::find($id);
+        return $annonce;
     }
 }

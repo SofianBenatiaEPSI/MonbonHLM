@@ -5,12 +5,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Logo
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="MonbonHLM\DashboardBundle\Entity\Photos_logementRepository")
+ * @ORM\Table(name="photo_logement_3")
+ * @ORM\Entity(repositoryClass="MonbonHLM\DashboardBundle\Entity\Photos3Repository")
  * @ORM\HasLifecycleCallbacks
  * @Assert\Callback(methods={"isFileUploadedOrExists"})
  */
-class Photos_logement
+class Photo3
 {
     /**
      * @var integer
@@ -58,7 +58,7 @@ class Photos_logement
     }
     protected function getUploadDir()
     {
-        return 'uploads/photos_logement';
+        return 'uploads/annonces/3';
     }
     private $filenameForRemove;
     /**

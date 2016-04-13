@@ -22,6 +22,9 @@ class AnnonceController extends Controller
 
             if ($form->isValid()){
 
+                $auteur = $this->get('security.context')->getToken()->getUser();
+                $annonce->setAuteur($auteur);
+
                 $em=  $this->getDoctrine()->getManager();
                 $em-> persist($annonce);
                 $em->flush();
@@ -60,13 +63,27 @@ class AnnonceController extends Controller
         ));
     }
 
-    public function RecupererdeuxAction()
+    public function RecupererdeuxAction($page)
     {
-        $annonce = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce');
-        $annonceTab = $annonce->Recupererannonce();
+        $maxannonces = 9;
 
-        return $this->render('ParrainlinkHomeBundle:Accueil:index.html.twig', array(
+        $annonce_count = $this->getDoctrine()
+            ->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->countAnnonceTotal();
+
+        $pagination = array(
+            'page' => $page,
+            'route' => 'monbon_hlm_home_annonces',
+            'pages_count' => ceil($annonce_count / $maxannonces),
+            'route_params' => array()
+        );
+
+        $annonceTab = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->Recupererannonce($page, $maxannonces);
+
+        return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
             'annonceTab' => $annonceTab,
+            'pagination' => $pagination
         ));
     }
 }

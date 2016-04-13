@@ -1,0 +1,82 @@
+<div class="container">
+
+    <div class="row">
+        <div class="header">
+
+            <div class="col-md-3 col-sm-12">
+                <div id="logo">
+                    <a href="{{path ('monbon_hlm_home_homepage')}}"><img src="{{ asset('home/images/logo.png')}}" alt="" /></a>
+                </div>
+            </div>
+
+            <div class="col-md-9 col-sm-12">
+                <ul class="header-widget">
+                    <li>
+                        <i class="sl sl-icon-call-in"></i>
+                        <div class="widget-content">
+                            <span class="title">Questions?</span>
+                            <span class="data">(123) 123-456 </span>
+                        </div>
+                    </li>
+
+                    <li class="with-btn"><a href="{{path ('monbon_hlm_home_ajouter_annonce')}}" class="button border medium">Déposer votre annonce</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+    </div>
+    <!-- Navigation
+    ================================================== -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Mobile Navigation -->
+                <div class="menu-responsive">
+                    <i class="fa fa-reorder menu-trigger"></i>
+                    <i class="fa fa-search search-trigger"></i>
+                    <form action="#" method="get" class="responsive-search" />
+                    <input type="text" onblur="if(this.value=='')this.value='to search type and hit enter';" onfocus="if(this.value=='to search type and hit enter')this.value='';" value="to search type and hit enter" />
+                    </form>
+                </div>
+
+                <!-- Main Navigation -->
+                <nav id="navigation">
+
+                    <ul class="menu" id="responsive">
+
+                        <li>
+                            <a href="{{path ('monbon_hlm_home_homepage')}}">Accueil</a>
+                        </li>
+
+                        <li>
+                            <a href="{{path ('monbon_hlm_home_annonces')}}">Annonces</a>
+                        </li>
+
+                        <li>
+                            <a href="{{path ('monbon_hlm_home_quartier')}}">Quartiers</a>
+                        </li>
+
+                        <li>
+                            <a href="{{path ('monbon_hlm_home_quartier')}}">Les bailleurs</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#">FAQ</a>
+                            <ul>
+                                <li><a href="shop.html">Fonctionnement</a></li>
+                                <li><a href="shop-product-page.html">Les démarches</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>

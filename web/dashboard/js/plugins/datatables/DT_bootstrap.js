@@ -9,7 +9,7 @@ $.extend( true, $.fn.dataTable.defaults, {
 } );
 
 
-/* Dasboard class modification */
+/* Dashboard class modification */
 $.extend( $.fn.dataTableExt.oStdClasses, {
 	"sWrapper": "dataTables_wrapper"
 } );

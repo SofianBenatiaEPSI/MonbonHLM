@@ -22,6 +22,13 @@ class Annonce
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="MonbonHLM\UserBundle\Entity\Utilisateurs")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     *
+     */
+    private $auteur;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="reference_locataire", type="string", length=255)
@@ -29,7 +36,7 @@ class Annonce
     private $reference_locataire;
 
     /**
-     * @ORM\OneToOne(targetEntity="Bailleur", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Bailleur", cascade={"persist"})
      * @ORM\JoinColumn(name="bailleur", referencedColumnName="id")
      **/
     private $reference_bailleur;
@@ -43,13 +50,13 @@ class Annonce
 
 
     /**
-     * @ORM\OneToOne(targetEntity="Quartier", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Quartier", cascade={"persist"})
      * @ORM\JoinColumn(name="quartier", referencedColumnName="id")
      **/
     private $quartier;
 
     /**
-     * @ORM\OneToOne(targetEntity="CodePostal", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="CodePostal", cascade={"persist"})
      * @ORM\JoinColumn(name="codepostal", referencedColumnName="id")
      **/
     private $code_postal;
@@ -76,10 +83,22 @@ class Annonce
     private $description_complementaire;
 
     /**
-     * @ORM\OneToOne(targetEntity="Photos_logement", cascade={"persist"})
-     * @ORM\JoinColumn(name="photos", referencedColumnName="id")
+     * @ORM\OneToOne(targetEntity="PhotoPrincipal", cascade={"persist"})
+     * @ORM\JoinColumn(name="photoP", referencedColumnName="id")
      **/
-    private $photos_logement;
+    private $photo_principal;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Photo2", cascade={"persist"})
+     * @ORM\JoinColumn(name="photo2", referencedColumnName="id")
+     **/
+    private $photo_2;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Photo3", cascade={"persist"})
+     * @ORM\JoinColumn(name="photo3", referencedColumnName="id")
+     **/
+    private $photo_3;
 
     /**
      * @ORM\OneToOne(targetEntity="TypeLogement", cascade={"persist"})
@@ -96,6 +115,22 @@ class Annonce
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
+     * @param mixed $auteur
+     */
+    public function setAuteur($auteur)
+    {
+        $this->auteur = $auteur;
     }
 
     /**
@@ -229,17 +264,49 @@ class Annonce
     /**
      * @return mixed
      */
-    public function getPhotosLogement()
+    public function getPhotoPrincipal()
     {
-        return $this->photos_logement;
+        return $this->photo_principal;
     }
 
     /**
-     * @param mixed $photos_logement
+     * @param mixed $photo_principal
      */
-    public function setPhotosLogement($photos_logement)
+    public function setPhotoPrincipal($photo_principal)
     {
-        $this->photos_logement = $photos_logement;
+        $this->photo_principal = $photo_principal;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto2()
+    {
+        return $this->photo_2;
+    }
+
+    /**
+     * @param mixed $photo_2
+     */
+    public function setPhoto2($photo_2)
+    {
+        $this->photo_2 = $photo_2;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto3()
+    {
+        return $this->photo_3;
+    }
+
+    /**
+     * @param mixed $photo_3
+     */
+    public function setPhoto3($photo_3)
+    {
+        $this->photo_3 = $photo_3;
     }
 
     /**
@@ -257,6 +324,4 @@ class Annonce
     {
         $this->type_logement = $type_logement;
     }
-
-
 }

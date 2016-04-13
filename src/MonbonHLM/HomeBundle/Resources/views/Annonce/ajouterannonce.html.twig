@@ -1,20 +1,104 @@
-<html>
-<form id="form-submit" class="form-submit" method="post" {{ form_enctype(form) }}>
-    <div class="wide-3">
-        <div class="explore">
-            <div class="prt-cont">
-                <div class="property-title">
-                    <h3>A propos du directeur</h3>
-                    <h5 class="team-color">Lorem Ipsum is simply dummy text of the printing and  typesetting industry. </h5>
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <title>Annonces</title>
+    {% include "::base.html.twig" %}
+</head>
+
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+    {% include "::menu.html.twig" %}
+    <!-- Titlebar
+    ================================================== -->
+    <div id="titlebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Ajouter une annonce</h2>
                 </div>
             </div>
         </div>
-        <div class="prt-cont">
-            <hr>
-            <div class="form-group">
-                {{ form (form) }}
-            </div>
+    </div>
+
+
+    <!-- Content
+    ================================================== -->
+    <div class="container">
+        <div class="row">
+            {{ form (form) }}
         </div>
     </div>
-</form>
+    <!-- Footer
+    ================================================== -->
+    <div class="margin-top-30"></div>
+
+    <div id="footer">
+        <!-- Main -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-6 col-xs-12">
+                    <h4>About</h4>
+                    <p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
+                    <a href="#" class="button social-btn"><i class="fa fa-facebook-official"></i> Like Us on Facebook</a>
+                </div>
+
+                <div class="col-md-4  col-sm-6 col-xs-12">
+                    <h4>Helpful Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+
+                    <ul class="footer-links">
+                        <li><a href="#">In the News</a></li>
+                        <li><a href="#">Our Blog</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3  col-sm-12 col-xs-12">
+                    <h4>Contact Us</h4>
+                    <div class="text-widget">
+                        <span>12345 Little Lonsdale St, Melbourne</span> <br />
+                        Phone: <span>(123) 123-456 </span><br />
+                        Fax: <span>(123) 123-456</span> <br />
+                        E-Mail:<span> office@example.com </span><br />
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyrights">©  Copyright 2016 by <a href="#">Reneva</a>. All Rights Reserved.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+
+    {% include "::scripts.html.twig" %}
+
+</div>
+<!-- Wrapper / End -->
+
+</body>
 </html>
