@@ -65,9 +65,10 @@ class AnnonceController extends Controller
 
     public function DetailAction($id)
     {
-        $cours = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce');
+        $annonce = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce');
         $annoncedet = new \MonbonHLM\DashboardBundle\Entity\Annonce();
-        $annoncedet = $cours->RecupererAnnonceParId($id);
+        $annoncedet = $annonce->RecupererAnnonceParId($id);
+
         return $this->render('MonbonHLMHomeBundle:Annonce:detailsannonce.html.twig', array('annonce' => $annoncedet));
     }
 

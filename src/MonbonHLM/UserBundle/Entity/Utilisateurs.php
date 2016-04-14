@@ -44,6 +44,12 @@ class Utilisateurs extends BaseUser
     private $telephone;
 
     /**
+     * @ORM\OneToMany(targetEntity="MonbonHLM\DashboardBundle\Entity\Annonce", mappedBy="auteur", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $annonce;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -101,5 +107,20 @@ class Utilisateurs extends BaseUser
         $this->telephone = $telephone;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAnnonce()
+    {
+        return $this->annonce;
+    }
+
+    /**
+     * @param mixed $annonce
+     */
+    public function setAnnonce($annonce)
+    {
+        $this->annonce = $annonce;
+    }
 
 }

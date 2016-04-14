@@ -47,4 +47,14 @@ class AnnonceRepository extends EntityRepository
         $annonce = parent::find($id);
         return $annonce;
     }
+
+    public function Auteurannonce($id) {
+        $query = $this->createQueryBuilder('n')
+            ->select('k')
+            ->where('n.auteur = :identifier')
+            ->setParameter('identifier', $id)
+            ->getQuery();
+        $query->setFirstResult(0);
+        return $query->getResult();
+    }
 }

@@ -65,14 +65,17 @@
 
                     <h4 class="headline with-border" style="margin-top: 100px;">Infos de l'annonceur</h4>
                     {% if is_granted('ROLE_USER') %}
+                        {% if app.user.annonce.count<=('0')%}
+                            <span>Vous devez poster une annonce pour voir les infos de l'annonceur</span>
+                        {% else %}
                         <ul class="details">
                             <li><span>Nom :</span> {{ annonce.auteur.nom }}</li>
                             <li><span>Prenom :</span> {{ annonce.auteur.prenom }}</li>
-                            <li><span>Telephone :</span> {{ annonce.auteur.telephone }}</li>
-                            <li><a href="#" class="button border"><i class="fa fa-envelope"></i> Echanger !</a></li>
+                            <li><a href="{{path ('monbon_hlm_home_envoyer_message_annonceur', {'id':annonce  .id}) }}" class="button border"><i class="fa fa-envelope"></i> Echanger !</a></li>
                         </ul>
+                        {% endif %}
                     {% else %}
-                        <span>Vous devez être connecter et avoir posté une annonce pour avoir les infos de l'annonceur</span>
+                        <span>Vous devez être connecter et avoir une annonce pour voir les infos de l'annonceur</span>
                     {% endif %}
                 </div>
             </div>

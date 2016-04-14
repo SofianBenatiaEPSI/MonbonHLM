@@ -22,9 +22,8 @@ class Annonce
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="MonbonHLM\UserBundle\Entity\Utilisateurs")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
-     *
+     * @ORM\ManyToOne(targetEntity="MonbonHLM\UserBundle\Entity\Utilisateurs", inversedBy="annonce")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $auteur;
 
@@ -118,7 +117,7 @@ class Annonce
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getAuteur()
     {

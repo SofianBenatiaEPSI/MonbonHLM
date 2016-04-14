@@ -20,6 +20,10 @@ monbon_hlm_home_modifier_annonce:
     path:     /modifier-annonce-{id}
     defaults: { _controller: MonbonHLMHomeBundle:Annonce:Modifier }
 
+monbon_hlm_home_envoyer_message_annonceur:
+    path:     /message-envoye/{id}
+    defaults: { _controller: MonbonHLMHomeBundle:MessageAnnonce:Message }
+
 
 ######################  QUARTIERS  #####################################
 
