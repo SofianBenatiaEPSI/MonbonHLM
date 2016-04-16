@@ -124,11 +124,11 @@ class AnnonceController extends Controller
 
         $annonce_count = $this->getDoctrine()
             ->getRepository('MonbonHLMDashboardBundle:Annonce')
-            ->countTypelogementTotal($id);
+            ->countAnnonceTypelogementTotal($id);
 
 
         $annonceTab = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce')
-            ->Recuperertypelogement($id, $page, $maxannonces);
+            ->Recupererannoncetypelogement($id, $page, $maxannonces);
 
         $maxannonces = 12;
         $pagination = array(
