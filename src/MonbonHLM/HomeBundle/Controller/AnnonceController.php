@@ -114,6 +114,32 @@ class AnnonceController extends Controller
             'pagination' => $pagination
         ));
     }
+
+    public function TypelogementAction($id, $page=1)
+    {
+        $maxannonces = 12;
+
+        $annonce_count = $this->getDoctrine()
+            ->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->countTypelogementTotal($id);
+
+
+        $annonceTab = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->Recuperertypelogement($id, $page, $maxannonces);
+
+        $maxannonces = 12;
+        $pagination = array(
+            'page' => $page,
+            'route' => 'monbon_hlm_home_annonces',
+            'pages_count' => ceil($annonce_count / $maxannonces),
+            'route_params' => array()
+        );
+
+        return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
+            'annonceTab' => $annonceTab,
+            'pagination' => $pagination
+        ));
+    }
     
 
     public function DetailAction($id)
@@ -157,8 +183,6 @@ class AnnonceController extends Controller
         }
         return $this->render('MonbonHLMHomeBundle:Annonce:modifierannonce.html.twig',  array('form'=>$form->createView()));
     }
-
-
 
 
 }

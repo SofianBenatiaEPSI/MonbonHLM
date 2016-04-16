@@ -2,143 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb27dd09-da4c-469a-b403-2ae2f5f704e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Entity/Photo_typelogement.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/bedge_grunge.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/brushed_alu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/crisp_paper_ruffles.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/diamond_upholstery.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/light_toast.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/navy_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/noise_pattern_with_crosslines.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/purty_wood.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/retina_wood.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/shattered.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/squared_metal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/stardust.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/subtle_stripes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/textured_stripes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/tileable_wood_texture.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/bg/vichy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/blog-post-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/blog-post-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/blog-post-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/blog-widget-01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/blog-widget-02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/blog-widget-03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/image-edge.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/latest-project-09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/logo-01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/logo-02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/logo-03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/logo-04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/logo-05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/logo-06.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/logo-07.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/parallax-img.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-01-after.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-01-before.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-02-after.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-02-before.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-03-after.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-03-before.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-04-after.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-04-before.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-category-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-category-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-category-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-category-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-category-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-photo-grid-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-photo-grid-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-photo-grid-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/project-photo-grid-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/recent-post-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/recent-post-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/recent-post-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-alt-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-alt-01a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-alt-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-alt-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-alt-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-alt-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/service-alt-06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-09a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-09b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-widget-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-widget-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/shop-widget-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-project-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-project-01a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-project-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-project-02a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-project-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-project-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-project-after.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-project-before.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-service-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-service-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-service-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/single-service-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/switcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/team-member-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/team-member-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/team-member-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/team-member-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/home/images/team-member-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/quartiers/2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/typelogement/t1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/typelogement/t2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/typelogement/t3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/typelogement/t4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/typelogement/t5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/typelogement/t6.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/uploads/annonces/1/1.jpeg" afterPath="$PROJECT_DIR$/web/uploads/annonces/1/1.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/uploads/annonces/2/1.jpeg" afterPath="$PROJECT_DIR$/web/uploads/annonces/2/1.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/uploads/annonces/3/1.jpeg" afterPath="$PROJECT_DIR$/web/uploads/annonces/3/1.jpeg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/footer.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/footer.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/menu.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/menu.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Entity/TypeLogement.php" afterPath="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Entity/TypeLogement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/AnnonceRepository.php" afterPath="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/AnnonceRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/TypeLogementRepository.php" afterPath="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/TypeLogementRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/TypeLogementController.php" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/TypeLogementController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/TypeLogement/index.html.twig" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/TypeLogement/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/home/css/colors/blue.css" afterPath="$PROJECT_DIR$/web/home/css/colors/blue.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/home/css/style.css" afterPath="$PROJECT_DIR$/web/home/css/style.css" />
     </list>
     <ignored path="MonbonHLM.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,34 +26,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6753247">
-              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnnonceController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AnnonceController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7111111">
-              <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+            <state vertical-scroll-proportion="2.5">
+              <caret line="127" column="35" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detailsannonce.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/detailsannonce.html.twig">
+      <file leaf-file-name="BailleurRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/BailleurRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.625">
-              <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="61" />
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.64444447">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TypeLogementRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/TypeLogementRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -250,8 +125,8 @@
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/TypeLogementController.php" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/TypeLogement/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php" />
+        <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig" />
       </list>
     </option>
   </component>
@@ -1369,13 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/BailleurRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/BailleursController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20212767">
@@ -1462,14 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67407405">
-          <caret line="302" column="472" selection-start-line="302" selection-start-column="472" selection-end-line="302" selection-end-column="472" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/menu.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1520,44 +1380,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/TypeLogement/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42962962">
-          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/TypeLogementController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37037036">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
-          <folding>
-            <element signature="e#51#108#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37911302">
-          <caret line="48" column="76" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/QuartierController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.82222223">
           <caret line="59" column="5" selection-start-line="37" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/TypeLogementRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6888889">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1570,38 +1396,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/TypeLogementController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35555556">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="e#51#108#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/TypeLogement/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66814816">
+          <caret line="51" column="78" selection-start-line="51" selection-start-column="78" selection-end-line="51" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4434907">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/TypeLogementRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageok.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6888889">
-          <caret line="31" column="14" selection-start-line="24" selection-start-column="8" selection-end-line="31" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.6">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5">
+          <caret line="127" column="35" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/BailleurRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/detailsannonce.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.625">
+        <state vertical-scroll-proportion="0.35555556">
           <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6992593">
+          <caret line="302" column="472" selection-start-line="302" selection-start-column="472" selection-end-line="302" selection-end-column="472" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6753247">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.64444447">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7111111">
-          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
