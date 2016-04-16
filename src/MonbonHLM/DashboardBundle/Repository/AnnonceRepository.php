@@ -39,7 +39,7 @@ class AnnonceRepository extends EntityRepository
     public function Recupererannoncebailleurs($idbailleur, $page=1, $maxperpage=9) {
         $query = $this->createQueryBuilder('i')
             ->select('i')
-            ->where('i.bailleur = :identifier')
+            ->where('i.reference_bailleur = :identifier')
             ->addOrderBy('i.id', 'DESC')
             ->getQuery()
             ->setMaxResults($maxperpage)
@@ -74,7 +74,7 @@ class AnnonceRepository extends EntityRepository
     {
         $qb = $this->createQueryBuilder('k');
         $qb->select('count(k)')
-            ->where('k.bailleurs = :identifier')
+            ->where('k.reference_bailleur = :identifier')
             ->setParameter('identifier', $idbailleurs);
 
         $totalannonces = $qb->getQuery()->getSingleScalarResult();

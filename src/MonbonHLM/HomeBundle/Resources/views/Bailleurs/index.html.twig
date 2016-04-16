@@ -48,7 +48,7 @@
 
             {% for bailleurs in bailleursTab %}
             <div class="col-md-4 col-sm-6">
-                <a href="{{path ('monbon_hlm_home_annonces_quartier', {'id':bailleurs  .id}) }}">
+                <a href="{{path ('monbon_hlm_home_annonces_bailleur', {'id':bailleurs  .id}) }}">
                 <!-- Service -->
                 <div class="service">
                         <img src="{{ asset('uploads/bailleurs/'~bailleurs.logo.id~'.'~bailleurs.logo.path) }}" alt="" style="width: 600px; height: auto" />

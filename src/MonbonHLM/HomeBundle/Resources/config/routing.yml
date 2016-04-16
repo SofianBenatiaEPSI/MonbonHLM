@@ -64,7 +64,7 @@ monbon_hlm_home_modifier_bailleur:
     path:     /modifierbailleur-{id}
     defaults: { _controller: MonbonHLMHomeBundle:Bailleurs:modifierbailleur }
 
-monbon_hlm_home_annonces_bailleurs:
+monbon_hlm_home_annonces_bailleur:
     path:     /annonces-bailleur/{id}
     defaults: { _controller: MonbonHLMHomeBundle:Annonce:Bailleurs, page: 1 }
 

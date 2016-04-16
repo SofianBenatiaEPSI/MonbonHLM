@@ -149,6 +149,7 @@
                 <!-- Carousel -->
                 <div class="logo-carousel">
                     {% for bailleurs in bailleuraccTab %}
+                    <a href="{{path ('monbon_hlm_home_annonces_bailleur', {'id':bailleurs  .id}) }}">
                     <div class="item"><img src="{{ asset('uploads/bailleurs/'~bailleurs.logo.id~'.'~bailleurs.logo.path) }}" alt="" /></div>
                     {% endfor %}
                 </div>
