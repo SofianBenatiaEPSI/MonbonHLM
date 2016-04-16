@@ -51,7 +51,7 @@
                 <!-- Item -->
                 <div class="isotope-item col-md-4 col-sm-6 kitchens">
                     <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}">
-                        <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" style="min-width: 500px; height: auto;"/>
+                        <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" style="min-width:350px; min-height: 300px;"/>
                         <div class="overlay">
                             <div class="overlay-content">
                                 <h4>{{ annonce.quartier.nom }}</h4>

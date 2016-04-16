@@ -82,7 +82,7 @@
             {% for annonce in annonceaccTab %}
                 <!-- Item -->
                 <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}" class="kitchens clickable">
-                    <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" />
+                    <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" style="height: 200px;" alt="" />
                     <div class="overlay">
                         <div class="overlay-content">
                             <h4>{{ annonce.quartier.nom }}</h4>
@@ -92,7 +92,6 @@
                     <div class="plus-icon"></div>
                 </a>
             {% endfor %}
-
         </div>
 
         <div class="container">

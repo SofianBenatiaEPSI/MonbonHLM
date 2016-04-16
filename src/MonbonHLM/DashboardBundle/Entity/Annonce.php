@@ -100,7 +100,7 @@ class Annonce
     private $photo_3;
 
     /**
-     * @ORM\OneToOne(targetEntity="TypeLogement", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="TypeLogement", cascade={"persist"})
      * @ORM\JoinColumn(name="type_logement", referencedColumnName="id")
      **/
     private $type_logement;

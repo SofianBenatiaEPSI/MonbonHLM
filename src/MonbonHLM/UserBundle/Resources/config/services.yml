@@ -3,3 +3,8 @@ services:
             class: MonbonHLM\UserBundle\Form\Type\RegistrationFormType
             tags:
                 - { name: form.type, alias: monbonhlm_user_registration }
+
+  monbonhlm_user.profile.form.type:
+               class: MonbonHLM\UserBundle\Form\Type\ProfileFormType
+               tags:
+                   - { name: form.type, alias: monbonhlm_user_profile }

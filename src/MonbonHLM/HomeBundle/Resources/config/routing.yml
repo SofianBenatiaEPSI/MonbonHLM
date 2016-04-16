@@ -32,9 +32,21 @@ monbon_hlm_home_quartier:
     path:     /quartiers
     defaults: { _controller: MonbonHLMHomeBundle:Quartier:Index, page: 1 }
 
+monbon_hlm_home_annonces_quartier:
+    path:     /annonces-quartier/{id}
+    defaults: { _controller: MonbonHLMHomeBundle:Annonce:Quartier, page: 1 }
+
 monbon_hlm_home_ajouter_quartier:
     path:     /ajouter-quartier
     defaults: { _controller: MonbonHLMHomeBundle:Quartier:Ajouter }
+
+
+######################  TYPE DE LOGEMENTS  #####################################
+
+
+monbon_hlm_home_type_logement:
+    path:     /type-logements
+    defaults: { _controller: MonbonHLMHomeBundle:TypeLogement:Index }
 
 
 ######################  BAILLEURS  #####################################
@@ -47,3 +59,22 @@ monbon_hlm_home_bailleurs:
 monbon_hlm_home_modifier_bailleur:
     path:     /modifierbailleur-{id}
     defaults: { _controller: MonbonHLMHomeBundle:Bailleurs:modifierbailleur }
+
+monbon_hlm_home_annonces_bailleurs:
+    path:     /annonces-bailleur/{id}
+    defaults: { _controller: MonbonHLMHomeBundle:Annonce:Bailleurs, page: 1 }
+
+######################  FAQ  #####################################
+
+
+monbon_hlm_home_fonctionnement:
+    path:     /fonctionnement
+    defaults: { _controller: MonbonHLMHomeBundle:Faq:Fonctionnement }
+
+monbon_hlm_home_demarches:
+    path:     /demarches
+    defaults: { _controller: MonbonHLMHomeBundle:Faq:Demarches }
+
+monbon_hlm_home_questionsreponses:
+    path:     /questions-reponses
+    defaults: { _controller: MonbonHLMHomeBundle:Faq:Questionsreponses }

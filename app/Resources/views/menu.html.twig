@@ -11,13 +11,21 @@
 
             <div class="col-md-9 col-sm-12">
                 <ul class="header-widget">
+                    {% if is_granted('ROLE_USER') %}
                     <li>
                         <i class="sl sl-icon-login"></i>
                         <div class="widget-content">
-                            <span style="font-size: 20px;margin-top: 12px;" class="title"><a href="{{path ('monbon_hlm_dashboard_homepage')}}">Espace client</a></span>
+                            <span style="font-size: 20px;margin-top: 12px;" class="title"><a href="{{path ('fos_user_security_logout')}}">Se deconnecter</a></span>
                         </div>
                     </li>
-
+                    {% else %}
+                    <li>
+                        <i class="sl sl-icon-login"></i>
+                        <div class="widget-content">
+                            <span style="font-size: 20px;margin-top: 12px;" class="title"><a href="{{path ('fos_user_security_login')}}">Connexion</a></span>
+                        </div>
+                    </li>
+                    {% endif %}
                     <li class="with-btn"><a href="{{path ('monbon_hlm_home_ajouter_annonce')}}" class="button border medium">Déposer votre annonce</a></li>
                 </ul>
             </div>
@@ -52,22 +60,27 @@
                         </li>
 
                         <li>
-                            <a href="{{path ('monbon_hlm_home_annonces')}}">Annonces</a>
+                            <a href="{{path ('monbon_hlm_home_annonces')}}">Les annonces</a>
                         </li>
 
                         <li>
-                            <a href="{{path ('monbon_hlm_home_quartier')}}">Quartiers</a>
+                            <a href="{{path ('monbon_hlm_home_quartier')}}">Les quartiers</a>
                         </li>
 
                         <li>
                             <a href="{{path ('monbon_hlm_home_bailleurs')}}">Les bailleurs</a>
                         </li>
 
+                        <li>
+                            <a href="{{path ('monbon_hlm_home_type_logement')}}">Les types de logement</a>
+                        </li>
+
                         <li class="dropdown">
                             <a href="#">FAQ</a>
                             <ul>
-                                <li><a href="shop.html">Fonctionnement</a></li>
-                                <li><a href="shop-product-page.html">Les démarches</a></li>
+                                <li><a href="{{path ('monbon_hlm_home_fonctionnement')}}">Fonctionnement</a></li>
+                                <li><a href="{{path ('monbon_hlm_home_demarches')}}">Les démarches</a></li>
+                                <li><a href="{{path ('monbon_hlm_home_questionsreponses')}}">Questions/réponses</a></li>
                             </ul>
                         </li>
 

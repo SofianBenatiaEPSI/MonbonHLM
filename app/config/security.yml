@@ -26,7 +26,7 @@ security:
             form_login:
                 check_path: /login_check
                 login_path: /login
-                default_target_path: /dashboard
+                default_target_path: /
                 provider: fos_userbundle
                 csrf_provider: form.csrf_provider
             logout:
@@ -38,8 +38,9 @@ security:
            - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
            - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
            - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-           - { path: ^/dashboard, role: ROLE_USER }
            - { path: ^/ajouter-annonce, role: ROLE_USER }
            - { path: ^/ajouter-quartier, role: ROLE_ADMIN }
            - { path: ^/admin, role: ROLE_ADMIN }
+           - { path: ^/annonces, role: ROLE_USER }
+           - { path: ^/annonce*, role: ROLE_USER }
 

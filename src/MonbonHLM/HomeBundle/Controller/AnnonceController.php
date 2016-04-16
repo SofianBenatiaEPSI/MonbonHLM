@@ -63,6 +63,59 @@ class AnnonceController extends Controller
         ));
     }
 
+    public function QuartierAction($id, $page=1)
+    {
+        $maxquartiers = 12;
+
+        $annonce_count = $this->getDoctrine()
+            ->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->countAnnonceQuartierTotal($id);
+
+
+        $annonceTab = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->Recupererannoncequartier($id, $page, $maxquartiers);
+
+        $maxquartiers = 12;
+        $pagination = array(
+            'page' => $page,
+            'route' => 'monbon_hlm_home_annonces',
+            'pages_count' => ceil($annonce_count / $maxquartiers),
+            'route_params' => array()
+        );
+
+        return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
+            'annonceTab' => $annonceTab,
+            'pagination' => $pagination
+        ));
+    }
+
+    public function BailleursAction($id, $page=1)
+    {
+        $maxannonces = 12;
+
+        $annonce_count = $this->getDoctrine()
+            ->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->countAnnonceBailleursTotal($id);
+
+
+        $annonceTab = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->Recupererannoncebailleurs($id, $page, $maxannonces);
+
+        $maxannonces = 12;
+        $pagination = array(
+            'page' => $page,
+            'route' => 'monbon_hlm_home_annonces',
+            'pages_count' => ceil($annonce_count / $maxannonces),
+            'route_params' => array()
+        );
+
+        return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
+            'annonceTab' => $annonceTab,
+            'pagination' => $pagination
+        ));
+    }
+    
+
     public function DetailAction($id)
     {
         $annonce = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce');

@@ -17,12 +17,12 @@
 
     <!-- Titlebar
     ================================================== -->
-    <div id="titlebar">
+    <div id="titlebar" style="background-image:url({{ asset('uploads/quartiers/'~annonce.quartier.photo.id~'.'~annonce.quartier.photo.path) }});background-position:center center;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
 
-                    <span>Annonce numéro {{ annonce.id }}</span>
+                    <h2 style="color: white;">Annonce numéro {{ annonce.id }}</h2>
                     <!-- <span>Tagline</span> -->
                 </div>
             </div>
@@ -75,7 +75,13 @@
                         </ul>
                         {% endif %}
                     {% else %}
-                        <span>Vous devez être connecter et avoir une annonce pour voir les infos de l'annonceur</span>
+                        <span>Vous devez être <span><a href="{{path ('fos_user_security_login')}}">connecter</a></span> et avoir <span><a href="{{path ('monbon_hlm_home_ajouter_annonce')}}">déposé une annonce</a></span> pour voir les infos de l'annonceur</span>
+                    {% endif %}
+
+                    {% if annonce.auteur.id == app.user.id %}
+                    <h3 class="headline with-border" style="margin-top: 100px;">Gérer mon annonce</h3>
+                        <a href="#"><i class="fa fa-edit"></i><span> Modifier mon annonce</span></a></br>
+                        <a href="#"><i class="fa fa-trash"></i><span> Supprimer mon annonce</span></a>
                     {% endif %}
                 </div>
             </div>

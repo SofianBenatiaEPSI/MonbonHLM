@@ -11,7 +11,7 @@ class BailleursController extends Controller
 {
     public function IndexAction($page)
     {
-        $maxbailleurs = 9;
+        $maxbailleurs = 20;
 
         $bailleurs_count = $this->getDoctrine()
             ->getRepository('MonbonHLMDashboardBundle:Bailleur')

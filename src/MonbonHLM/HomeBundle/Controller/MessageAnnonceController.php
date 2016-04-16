@@ -12,9 +12,14 @@ class MessageAnnonceController extends Controller
     public function MessageAction($id)
     {
         $user = $this->getUser();
-        $userann = $this->getUser()->getAnnonce();
+
         $em = $this->getDoctrine()->getManager();
         $annoncerepo = $em->getRepository('MonbonHLMDashboardBundle:Annonce');
+
+        $annonceUserConnected = $annoncerepo->Auteurannonce($user->getId());
+        $userann = $annonceUserConnected->getId();
+
+
         $annonce = $annoncerepo->find($id);
 
         $message = \Swift_Message::newInstance()
@@ -23,7 +28,8 @@ class MessageAnnonceController extends Controller
             ->setTo($annonce->getAuteur()->getEmailCanonical())
             ->setCharset('utf-8')
             ->setContentType('text/html')
-            ->setBody($this->renderView('MonbonHLMHomeBundle:Message:index.html.twig', array('user' => $user, 'annonce' => $annonce, 'userann' => $userann)));
+            ->setBody($this->renderView('MonbonHLMHomeBundle:Message:index.html.twig',
+                array('user' => $user, 'annonce' => $annonce, 'userann' => $userann)));
 
         $this->get('mailer')->send($message);
 

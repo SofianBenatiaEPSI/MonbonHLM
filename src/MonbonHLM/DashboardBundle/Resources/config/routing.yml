@@ -1,3 +1,0 @@
-monbon_hlm_dashboard_homepage:
-    path:     /dashboard
-    defaults: { _controller: MonbonHLMDashboardBundle:Dashboard:Recuperer }

@@ -23,6 +23,32 @@ class AnnonceRepository extends EntityRepository
         return $query->getResult();
     }
 
+    public function Recupererannoncequartier($idquartier, $page=1, $maxperpage=9) {
+        $query = $this->createQueryBuilder('i')
+            ->select('i')
+            ->where('i.quartier = :identifier')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage)
+            ->setParameter('identifier', $idquartier);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
+    public function Recupererannoncebailleurs($idbailleur, $page=1, $maxperpage=9) {
+        $query = $this->createQueryBuilder('i')
+            ->select('i')
+            ->where('i.bailleur = :identifier')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage)
+            ->setParameter('identifier', $idbailleur);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
     public function Recupererannonceaccueil($page=1, $maxperpage=12) {
         $query = $this->createQueryBuilder('i')
             ->addOrderBy('i.id', 'DESC')
@@ -31,6 +57,28 @@ class AnnonceRepository extends EntityRepository
         $query->setFirstResult(($page-1) * $maxperpage)
             ->setMaxResults($maxperpage);
         return $query->getResult();
+    }
+
+    public function countAnnonceQuartierTotal($idquartier)
+    {
+        $qb = $this->createQueryBuilder('k');
+        $qb->select('count(k)')
+        ->where('k.quartier = :identifier')
+            ->setParameter('identifier', $idquartier);
+
+        $totalannonces = $qb->getQuery()->getSingleScalarResult();
+        return $totalannonces;
+    }
+
+    public function countAnnonceBailleursTotal($idbailleurs)
+    {
+        $qb = $this->createQueryBuilder('k');
+        $qb->select('count(k)')
+            ->where('k.bailleurs = :identifier')
+            ->setParameter('identifier', $idbailleurs);
+
+        $totalannonces = $qb->getQuery()->getSingleScalarResult();
+        return $totalannonces;
     }
 
     public function countAnnonceTotal()
@@ -50,11 +98,11 @@ class AnnonceRepository extends EntityRepository
 
     public function Auteurannonce($id) {
         $query = $this->createQueryBuilder('n')
-            ->select('k')
+            ->select('n')
             ->where('n.auteur = :identifier')
             ->setParameter('identifier', $id)
             ->getQuery();
         $query->setFirstResult(0);
-        return $query->getResult();
+        return $query->getSingleResult();
     }
 }
