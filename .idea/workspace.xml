@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb27dd09-da4c-469a-b403-2ae2f5f704e5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageadmin.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageuserconnected.html.twig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/index.html.twig" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageauteur.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Controller/ProfileController.php" afterPath="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Controller/ProfileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Resources/views/Profile/edit_content.html.twig" afterPath="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Resources/views/Profile/edit_content.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/MessageAnnonceController.php" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/MessageAnnonceController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig" afterPath="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig" />
     </list>
     <ignored path="MonbonHLM.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AnnonceController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php">
+      <file leaf-file-name="MessageAnnonceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/MessageAnnonceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7644445">
-              <caret line="130" column="42" selection-start-line="130" selection-start-column="42" selection-end-line="130" selection-end-column="42" />
+            <state vertical-scroll-proportion="-20.0">
+              <caret line="53" column="81" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messageadmin.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageadmin.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.26666668">
+              <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -65,8 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Entity/Utilisateurs.php" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageok.html.twig" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/ajouterannonce.html.twig" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Resources/views/Dashboard/index.html.twig" />
@@ -93,7 +103,6 @@
         <option value="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Entity/Annonce.php" />
-        <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/MessageAnnonceController.php" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/index.html.twig" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Controller/SecurityController.php" />
@@ -111,11 +120,14 @@
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/TypeLogementController.php" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/TypeLogement/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Controller/ProfileController.php" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Resources/views/Profile/edit_content.html.twig" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/AnnonceRepository.php" />
         <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php" />
+        <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/index2.html.twig" />
+        <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/MessageAnnonceController.php" />
+        <option value="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageadmin.html.twig" />
       </list>
     </option>
   </component>
@@ -997,19 +1009,19 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Ecommerce-0.21" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Entity" />
-      <recent name="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Resources" />
-      <recent name="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Ressources/config" />
-      <recent name="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Ressources" />
-      <recent name="$PROJECT_DIR$/app/Resources/FOSUserBundle" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Resources/views" />
       <recent name="$PROJECT_DIR$/app/Resources/views" />
       <recent name="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Resources/views/Base" />
       <recent name="$PROJECT_DIR$/app/Resources/views/home" />
       <recent name="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message" />
+      <recent name="$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Entity" />
+      <recent name="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Resources" />
+      <recent name="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Ressources/config" />
+      <recent name="$PROJECT_DIR$/src/MonbonHLM/UserBundle/Ressources" />
     </key>
   </component>
   <component name="RunManager">
@@ -1113,20 +1125,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/UserBundle/Controller/ResettingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.089153044">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/UserBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/UserBundle/MonbonHLMUserBundle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
@@ -1201,13 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19368723">
           <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/MessageAnnonceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34180138">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1367,26 +1358,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageok.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/detailsannonce.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35555556">
           <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6992593">
-          <caret line="302" column="472" selection-start-line="302" selection-start-column="472" selection-end-line="302" selection-end-column="472" />
           <folding />
         </state>
       </provider>
@@ -1412,17 +1387,6 @@
         <state vertical-scroll-proportion="0.5511111">
           <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35555556">
-          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1466,14 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/QuartierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/TypeLogementController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5777778">
@@ -1492,6 +1448,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6755555">
+          <caret line="130" column="42" selection-start-line="130" selection-start-column="42" selection-end-line="130" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Annonce/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86977494">
+          <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MonbonHLM/DashboardBundle/Repository/AnnonceRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.416667">
@@ -1500,10 +1474,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/AnnonceController.php">
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageok.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7644445">
-          <caret line="130" column="42" selection-start-line="130" selection-start-column="42" selection-end-line="130" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/MessageAnnonceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="53" column="81" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Controller/QuartierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageauteur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="302" column="123" selection-start-line="302" selection-start-column="116" selection-end-line="302" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageuserconnected.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.044444446">
+          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MonbonHLM/HomeBundle/Resources/views/Message/messageadmin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26666668">
+          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
           <folding />
         </state>
       </provider>

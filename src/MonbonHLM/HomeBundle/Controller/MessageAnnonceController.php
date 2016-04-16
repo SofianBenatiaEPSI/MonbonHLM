@@ -28,9 +28,31 @@ class MessageAnnonceController extends Controller
             ->setTo($annonce->getAuteur()->getEmailCanonical())
             ->setCharset('utf-8')
             ->setContentType('text/html')
-            ->setBody($this->renderView('MonbonHLMHomeBundle:Message:index.html.twig',
+            ->setBody($this->renderView('MonbonHLMHomeBundle:Message:messageauteur.html.twig',
                 array('user' => $user, 'annonce' => $annonce, 'userann' => $userann)));
 
+        $this->get('mailer')->send($message);
+
+
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Vous avez envoyé une demande d\'échange')
+            ->setFrom(array('monbonhlmmtp@gmail.com' => "MonbonHLM"))
+            ->setTo($this->getUser()->getEmailCanonical())
+            ->setCharset('utf-8')
+            ->setContentType('text/html')
+            ->setBody($this->renderView('MonbonHLMHomeBundle:Message:messageuserconnected.html.twig',
+                array('user' => $user, 'annonce' => $annonce, 'userann' => $userann)));
+        $this->get('mailer')->send($message);
+
+
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Une nouvelle demande d\'echange')
+            ->setFrom(array('monbonhlmmtp@gmail.com' => "MonbonHLM"))
+            ->setTo(array('sofian.benatia@live.fr' => 'Infos demande annonce MonbonHLM'))
+            ->setCharset('utf-8')
+            ->setContentType('text/html')
+            ->setBody($this->renderView('MonbonHLMHomeBundle:Message:messageadmin.html.twig',
+                array('user' => $user, 'annonce' => $annonce, 'userann' => $userann)));
         $this->get('mailer')->send($message);
 
         return $this->render('MonbonHLMHomeBundle:Message:messageok.html.twig');

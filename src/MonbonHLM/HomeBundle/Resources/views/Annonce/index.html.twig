@@ -42,18 +42,19 @@
     <!-- Content
     ================================================== -->
     <div class="container">
-    {% if annoncecount==0 %}
-        <div class="row">
+
+            {% if annoncecount==0 %}
+            <div class="row">
             <div class="notification warning closeable">
                 <p><span style="text-align: center;">Aucune annonce </span>disponible</p>
                 <a class="close" href="#"></a>
             </div>
-        </div>
-    {% else %}
-        {% for annonce in annonceTab %}
+            </div>
+            {% else %}
             <div class="row">
                 <!-- Projects -->
                 <div class="projects isotope-wrapper">
+                    {% for annonce in annonceTab %}
                     <!-- Item -->
                     <div class="isotope-item col-md-4 col-sm-6 kitchens">
                         <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}">
@@ -67,11 +68,11 @@
                             <div class="plus-icon"></div>
                         </a>
                     </div>
+                    {% endfor %}
                 </div>
                 {% include 'MonbonHLMHomeBundle:Pagination:pagination.html.twig' %}
             </div>
-        {% endfor %}
-    {% endif %}
+            {% endif %}
     </div>
 
     {% include "::footer.html.twig" %}
