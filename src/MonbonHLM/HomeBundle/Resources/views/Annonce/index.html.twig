@@ -42,27 +42,36 @@
     <!-- Content
     ================================================== -->
     <div class="container">
+    {% if annoncecount==0 %}
+        <div class="row">
+            <div class="notification warning closeable">
+                <p><span style="text-align: center;">Aucune annonce </span>disponible</p>
+                <a class="close" href="#"></a>
+            </div>
+        </div>
+    {% else %}
         {% for annonce in annonceTab %}
-                <div class="row">
-                    <!-- Projects -->
-                    <div class="projects isotope-wrapper">
-                        <!-- Item -->
-                        <div class="isotope-item col-md-4 col-sm-6 kitchens">
-                            <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}">
-                                <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" style="min-width:350px; min-height: 300px;"/>
-                                <div class="overlay">
-                                    <div class="overlay-content">
-                                        <h4>{{ annonce.quartier.nom }}</h4>
-                                        <span>{{ annonce.typelogement.type }}</span>
-                                    </div>
+            <div class="row">
+                <!-- Projects -->
+                <div class="projects isotope-wrapper">
+                    <!-- Item -->
+                    <div class="isotope-item col-md-4 col-sm-6 kitchens">
+                        <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}">
+                            <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" style="min-width:350px; min-height: 300px;"/>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h4>{{ annonce.quartier.nom }}</h4>
+                                    <span>{{ annonce.typelogement.type }}</span>
                                 </div>
-                                <div class="plus-icon"></div>
-                            </a>
-                        </div>
+                            </div>
+                            <div class="plus-icon"></div>
+                        </a>
                     </div>
-                    {% include 'MonbonHLMHomeBundle:Pagination:pagination.html.twig' %}
                 </div>
+                {% include 'MonbonHLMHomeBundle:Pagination:pagination.html.twig' %}
+            </div>
         {% endfor %}
+    {% endif %}
     </div>
 
     {% include "::footer.html.twig" %}

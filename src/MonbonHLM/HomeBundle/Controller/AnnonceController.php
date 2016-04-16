@@ -59,7 +59,8 @@ class AnnonceController extends Controller
 
         return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
             'annonceTab' => $annonceTab,
-            'pagination' => $pagination
+            'pagination' => $pagination,
+            'annoncecount' => $annonce_count
         ));
     }
 
@@ -85,7 +86,8 @@ class AnnonceController extends Controller
 
         return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
             'annonceTab' => $annonceTab,
-            'pagination' => $pagination
+            'pagination' => $pagination,
+            'annoncecount' => $annonce_count
         ));
     }
 
@@ -111,7 +113,8 @@ class AnnonceController extends Controller
 
         return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
             'annonceTab' => $annonceTab,
-            'pagination' => $pagination
+            'pagination' => $pagination,
+            'annoncecount' => $annonce_count
         ));
     }
 
@@ -137,7 +140,8 @@ class AnnonceController extends Controller
 
         return $this->render('MonbonHLMHomeBundle:Annonce:index.html.twig', array(
             'annonceTab' => $annonceTab,
-            'pagination' => $pagination
+            'pagination' => $pagination,
+            'annoncecount' => $annonce_count
         ));
     }
     
