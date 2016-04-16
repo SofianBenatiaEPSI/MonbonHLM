@@ -42,30 +42,39 @@
     <!-- Content
     ================================================== -->
     <div class="container">
-
-        <div class="row">
-
-            <!-- Projects -->
-            <div class="projects isotope-wrapper">
-                {% for annonce in annonceTab %}
-                <!-- Item -->
-                <div class="isotope-item col-md-4 col-sm-6 kitchens">
-                    <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}">
-                        <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" style="min-width:350px; min-height: 300px;"/>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h4>{{ annonce.quartier.nom }}</h4>
-                                <span>{{ annonce.typelogement.type }}</span>
+            {% for annonce in annonceTab %}
+                {% if annoncecount>=('0')%}
+                    <div class="row">
+                        <!-- Projects -->
+                        <div class="projects isotope-wrapper">
+                            <!-- Item -->
+                            <div class="isotope-item col-md-4 col-sm-6 kitchens">
+                                <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}">
+                                    <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" alt="" style="min-width:350px; min-height: 300px;"/>
+                                    <div class="overlay">
+                                        <div class="overlay-content">
+                                            <h4>{{ annonce.quartier.nom }}</h4>
+                                            <span>{{ annonce.typelogement.type }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="plus-icon"></div>
+                                </a>
                             </div>
                         </div>
-                        <div class="plus-icon"></div>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-            {% include 'MonbonHLMHomeBundle:Pagination:pagination.html.twig' %}
+                        {% include 'MonbonHLMHomeBundle:Pagination:pagination.html.twig' %}
 
-        </div>
+                    </div>
+                {% else %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="notification warning closeable">
+                                <p style="text-align: center;"><span>Aucune annonce</span> disponible</p>
+                                <a class="close" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
     </div>
 
     {% include "::footer.html.twig" %}

@@ -12,4 +12,28 @@ use Doctrine\ORM\EntityRepository;
  */
 class TypeLogementRepository extends EntityRepository
 {
+    public function Recuperertypelogement($page=1, $maxperpage=6) {
+        $query = $this->createQueryBuilder('i')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
+    public function countTypelogementTotal()
+    {
+        $qb = $this->createQueryBuilder('k');
+        $qb->select('count(k)');
+
+        $totalquartier = $qb->getQuery()->getSingleScalarResult();
+        return $totalquartier;
+    }
+
+    public function RecupererTypelogementParId($id)
+    {
+        $quartier = parent::find($id);
+        return $quartier;
+    }
 }

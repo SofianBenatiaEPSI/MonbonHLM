@@ -46,7 +46,11 @@ monbon_hlm_home_ajouter_quartier:
 
 monbon_hlm_home_type_logement:
     path:     /type-logements
-    defaults: { _controller: MonbonHLMHomeBundle:TypeLogement:Index }
+    defaults: { _controller: MonbonHLMHomeBundle:TypeLogement:Index, page: 1 }
+
+monbon_hlm_home_annonces_type_logement:
+    path:     /annonces-typelogement/{id}
+    defaults: { _controller: MonbonHLMHomeBundle:Annonce:Typelogement, page: 1 }
 
 
 ######################  BAILLEURS  #####################################

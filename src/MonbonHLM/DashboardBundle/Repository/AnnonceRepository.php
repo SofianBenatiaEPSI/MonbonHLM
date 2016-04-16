@@ -105,4 +105,54 @@ class AnnonceRepository extends EntityRepository
         $query->setFirstResult(0);
         return $query->getSingleResult();
     }
+
+
+    public function Recupererannoncetypelogement($idtypelogement, $page=1, $maxperpage=6) {
+        $query = $this->createQueryBuilder('i')
+            ->select('i')
+            ->where('i.type_logement = :identifier')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage)
+            ->setParameter('identifier', $idtypelogement);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
+    public function countAnnonceTypelogementTotal($idtypelogement)
+    {
+        $qb = $this->createQueryBuilder('k');
+        $qb->select('count(k)')
+            ->where('k.type_logement = :identifier')
+            ->setParameter('identifier', $idtypelogement);
+
+        $totalannonces = $qb->getQuery()->getSingleScalarResult();
+        return $totalannonces;
+    }
+
+    public function Recuperertypelogement($page=1, $maxperpage=6) {
+        $query = $this->createQueryBuilder('i')
+            ->addOrderBy('i.id', 'ASC')
+            ->getQuery()
+            ->setMaxResults($maxperpage);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
+    public function counttypelogementTotal()
+    {
+        $qb = $this->createQueryBuilder('k');
+        $qb->select('count(k)');
+
+        $totaltypelogement = $qb->getQuery()->getSingleScalarResult();
+        return $totaltypelogement;
+    }
+
+    public function RecuperertypelogementParId($id)
+    {
+        $typelogement = parent::find($id);
+        return $typelogement;
+    }
 }

@@ -92,7 +92,8 @@ body { border-top: 5px solid #666;}
 
 /* Logo */
 #logo {
-	margin-top: 4px;
+	margin-top: 14px;
+	width: 350px;
 }
 
 .header { margin: 30px 0 28px 0;}
@@ -1424,7 +1425,6 @@ ul.footer-links {
 .footer-links li { position: relative; list-style: none; }
 
 .footer-links li a {
-	padding: 0 0 7px 13px;
 	display: inline-block;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -1441,14 +1441,11 @@ ul.footer-links {
 }
 
 .footer-links li:before {
-	font-family: "FontAwesome";
 	font-size: 12px;
-	content: "ïƒš";
 	color: #fff;
 	position: absolute;
 	left: 0;
 	top: 0px;
-	padding: 0 7px 0 0;
 	color: #ddd;
 }
 
@@ -5599,7 +5596,6 @@ table.basic-table { margin-bottom: 0; }
 
 	#testimonials { margin-top: 50px; }
 	a.button.social-btn { margin-bottom: 30px; }
-	.copyrights { text-align: left; }
 	.details.alt {  margin-top: 15px; }
 	ul.services-list { margin-bottom: 40px; }
 	.the-team-image img { width: 100%;}

@@ -28,6 +28,12 @@ class TypeLogement
      */
     private $type;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Photo_typelogement", cascade={"persist"})
+     * @ORM\JoinColumn(name="photo", referencedColumnName="id")
+     **/
+    protected $photo;
+
 
     /**
      * Get id
@@ -61,4 +67,22 @@ class TypeLogement
     {
         return $this->type;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @param mixed $photo
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    }
+
+
 }
