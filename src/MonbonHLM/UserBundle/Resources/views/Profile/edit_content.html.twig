@@ -1,8 +1,9 @@
-{% trans_default_domain 'FOSUserBundle' %}
-Alors ?
-{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+<form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" novalidate>
+    {{ form_rest(form) }}
+    <div class="form-actions">
+        <a class="btn btn-default" href="{{ path('monbon_hlm_home_homepage') }}">Annuler</a>
+        <button id="sdz_blogbundle_articleedittype" type="submit" class="btn btn-primary btn-large">
+            Envoyer
+        </button>
     </div>
-{{ form_end(form) }}
+</form>

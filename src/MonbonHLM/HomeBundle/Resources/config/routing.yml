@@ -24,6 +24,11 @@ monbon_hlm_home_envoyer_message_annonceur:
     path:     /message-envoye/{id}
     defaults: { _controller: MonbonHLMHomeBundle:MessageAnnonce:Message }
 
+monbon_hlm_home_supprimer_annonce:
+    path:     /supprimer-annonce/{id}
+    defaults: { _controller: MonbonHLMHomeBundle:Annonce:Supprimer }
+
+
 
 ######################  QUARTIERS  #####################################
 
@@ -82,3 +87,7 @@ monbon_hlm_home_demarches:
 monbon_hlm_home_questionsreponses:
     path:     /questions-reponses
     defaults: { _controller: MonbonHLMHomeBundle:Faq:Questionsreponses }
+
+
+######################  FAQ  #####################################
+

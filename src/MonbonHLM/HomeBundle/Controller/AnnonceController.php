@@ -2,6 +2,7 @@
 
 namespace MonbonHLM\HomeBundle\Controller;
 
+use MonbonHLM\DashboardBundle\Form\AnnonceEditType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use MonbonHLM\DashboardBundle\Form\AnnonceType;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -160,7 +161,7 @@ class AnnonceController extends Controller
         $annonce = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce');
         $annoncedet = $annonce->RecupererAnnonceParId($id);
 
-        $form = $this->createForm(new AnnonceType(), $annoncedet);
+        $form = $this->createForm(new AnnonceEditType(), $annoncedet);
 
         if ($this->get('request')->getMethod() == 'POST'){
             //On récupére les données du formulaire
@@ -168,24 +169,38 @@ class AnnonceController extends Controller
             if ($form->isValid())
             {
                 $em = $this->getDoctrine()->getManager();
+                $annoncedet->setReferencelocataire($form["reference_locataire"]->getData());
                 $annoncedet->setReferencebailleur($form["reference_bailleur"]->getData());
+                $annoncedet->setAdresse($form["adresse"]->getData());
                 $annoncedet->setQuartier($form["quartier"]->getData());
                 $annoncedet->setCodepostal($form["code_postal"]->getData());
-                $annoncedet->setPhoto2($form["photo_2"]->getData());
-                $annoncedet->setPhoto3($form["photo_3"]->getData());
-                $annoncedet->setTypelogement($form["type_logement"]->getData());
-                $annoncedet->setReferencelocataire($form["reference_locataire"]->getData());
-                $annoncedet->setAdresse($form["adresse"]->getData());
                 $annoncedet->setEtage($form["etage"]->getData());
                 $annoncedet->setNumerologement($form["numero_logement"]->getData());
                 $annoncedet->setDescriptioncomplementaire($form["description_complementaire"]->getData());
-                $annoncedet->setPhotoPrincipal($form["photo_principal"]->getData());
+
                 $em->persist($annoncedet);
                 $em->flush();
-                return new RedirectResponse($this->generateUrl('monbon_hlm_dashboard_homepage'));
+                return new RedirectResponse($this->generateUrl('monbon_hlm_home_annonces'));
             }
         }
         return $this->render('MonbonHLMHomeBundle:Annonce:modifierannonce.html.twig',  array('form'=>$form->createView()));
+    }
+
+    public function SupprimerAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $annoncedet = $em->getRepository('MonbonHLMDashboardBundle:Annonce')->find($id);
+
+        if (!$annoncedet) {
+            throw $this->createNotFoundException(
+                'Aucun élément trouvé pour cet id : '.$id
+            );
+        }
+
+        $em->remove($annoncedet);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('monbon_hlm_home_annonces'));
     }
 
 

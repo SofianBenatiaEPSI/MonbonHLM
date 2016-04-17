@@ -80,8 +80,8 @@
 
                     {% if annonce.auteur.id == app.user.id %}
                     <h3 class="headline with-border" style="margin-top: 100px;">Gérer mon annonce</h3>
-                        <a href="#"><i class="fa fa-edit"></i><span> Modifier mon annonce</span></a></br>
-                        <a href="#"><i class="fa fa-trash"></i><span> Supprimer mon annonce</span></a>
+                        <a href="{{ path('monbon_hlm_home_modifier_annonce', {'id':annonce  .id}) }}"><i class="fa fa-edit"></i><span> Modifier mon annonce</span></a></br>
+                        <a href="{{ path('monbon_hlm_home_supprimer_annonce', {'id':annonce.id}) }}" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette annonce?'));"><i class="fa fa-trash"></i><span> Supprimer mon annonce</span></a>
                     {% endif %}
                 </div>
             </div>

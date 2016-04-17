@@ -34,13 +34,18 @@ class ProfileController extends Controller
     public function showAction()
     {
         $user = $this->getUser();
-        if (!is_object($user) || !$user instanceof UserInterface) {
-            throw new AccessDeniedException('This user does not have access to this section.');
-        }
+        $em = $this->getDoctrine()->getManager();
+        $annoncerepo = $em->getRepository('MonbonHLMDashboardBundle:Annonce');
 
-        return $this->render('FOSUserBundle:Profile:show.html.twig', array(
-            'user' => $user
+        $annonceUserConnected = $annoncerepo->Auteurannonce($user->getId());
+        $userann = $annonceUserConnected->getId();
+
+        return $this->render('MonbonHLMUserBundle:Profile:show.html.twig', array(
+            'user' => $user,
+            'userann' => $userann,
+            'annonce' => $annonceUserConnected
         ));
+
     }
 
     /**

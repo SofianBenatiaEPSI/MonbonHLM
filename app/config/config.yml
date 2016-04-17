@@ -78,3 +78,6 @@ fos_user:
     registration:
             form:
                 type: monbonhlm_user_registration
+    profile:
+                  form:
+                        type: monbonhlm_user_profile
