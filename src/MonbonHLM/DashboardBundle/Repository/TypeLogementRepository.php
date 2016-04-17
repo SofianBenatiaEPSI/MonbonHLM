@@ -14,7 +14,7 @@ class TypeLogementRepository extends EntityRepository
 {
     public function Recuperertypelogement($page=1, $maxperpage=6) {
         $query = $this->createQueryBuilder('i')
-            ->addOrderBy('i.id', 'DESC')
+            ->addOrderBy('i.id', 'ASC')
             ->getQuery()
             ->setMaxResults($maxperpage);
         $query->setFirstResult(($page-1) * $maxperpage)

@@ -105,6 +105,12 @@ class Annonce
      **/
     private $type_logement;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="TypeLogement", cascade={"persist"})
+     * @ORM\JoinColumn(name="type_logementrechercher", referencedColumnName="id")
+     **/
+    private $type_logementrechercher;
+
 
     /**
      * Get id
@@ -323,4 +329,24 @@ class Annonce
     {
         $this->type_logement = $type_logement;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeLogementrechercher()
+    {
+        return $this->type_logementrechercher;
+    }
+
+    /**
+     * @param mixed $type_logementrechercher
+     */
+    public function setTypeLogementrechercher($type_logementrechercher)
+    {
+        $this->type_logementrechercher = $type_logementrechercher;
+    }
+
+
+
+
 }

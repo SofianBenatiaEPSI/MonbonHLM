@@ -123,4 +123,6 @@ class Utilisateurs extends BaseUser
         $this->annonce = $annonce;
     }
 
+
+
 }
