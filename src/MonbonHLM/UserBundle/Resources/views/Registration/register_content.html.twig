@@ -1,8 +1,135 @@
-{% trans_default_domain 'FOSUserBundle' %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <title>MonbonHLM- Créer un compte</title>
 
-{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{ asset('home/css/style.css')}}" />
+    <link rel="stylesheet" href="{{ asset('home/css/colors/blue.css')}}" id="colors" />
+    <link rel="icon" type="image/png" href="{{ asset('home/images/logo.png') }}"/>
+    <link rel=icon href=favicon.png sizes="16x16" type="{{ asset('home/images/logo.png')}}">
+    <link rel=icon href=iphone.png sizes="57x57" type="{{ asset('home/images/logo.png')}}">
+    <meta name=application-name content="MonbonHLM">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700">
+    <link rel="stylesheet" href="{{ asset('dashboard/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('dashboard/js/libs/css/ui-lightness/jquery-ui-1.9.2.custom.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('dashboard/css/bootstrap.min.css')}}">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="{{ asset('dashboard/css/target-admin.css')}}">
+    <link rel="stylesheet" href="{{ asset('dashboard/css/custom.css')}}">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<div class="account-wrapper">
+
+    <div class="account-logo">
+        <img src="{{ asset('home/images/Logo-banner.png') }}" style="max-width: 100%!important;" alt="MonbonHLM">
     </div>
-{{ form_end(form) }}
+
+
+    <div class="account-body">
+
+        <h3 class="account-body-title" style="font-size: 25px;">Créez votre compte dès maintenant !</h3>
+
+        <form class="form account-form" action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST">
+
+            <div class="form-group">
+								<span class="input-icon">
+                                    <label for="username">Adresse email</label>
+									<input class="form-control" placeholder="Adresse email" {{ form_widget(form.email) }}
+									 </span>
+            </div>
+
+            <div class="form-group form-actions">
+								<span class="input-icon">
+                                    <label for="password">Nom d'utilisateur</label>
+									<input class="form-control" placeholder="Nom d'utilisateur" {{ form_widget(form.username) }}
+								</span>
+            </div>
+
+            <div class="form-group">
+								<span class="input-icon">
+                                    <label for="username">Mot de passe</label>
+									<input class="form-control" placeholder="Mot de passe" {{ form_widget(form.plainPassword.first) }}
+									 </span>
+            </div>
+
+            <div class="form-group form-actions">
+								<span class="input-icon">
+                                    <label for="password">Vérification du mot de passe</label>
+									<input class="form-control" placeholder="Retaper votre mot de passe" {{ form_widget(form.plainPassword.second) }}
+								</span>
+            </div>
+
+            <div class="form-group form-actions">
+								<span class="input-icon">
+                                    <label for="password">Nom</label>
+									<input class="form-control" placeholder="Nom" {{ form_widget(form.nom) }}
+								</span>
+            </div>
+
+            <div class="form-group form-actions">
+								<span class="input-icon">
+                                    <label for="password">Prénom</label>
+									<input class="form-control" placeholder="Prénom" {{ form_widget(form.prenom) }}
+								</span>
+            </div>
+
+            <div class="form-group form-actions">
+								<span class="input-icon">
+                                    <label for="password">Téléphone</label>
+									<input class="form-control" placeholder="Téléphone" {{ form_widget(form.telephone) }}
+								</span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-secondary btn-block btn-lg" tabindex="6" value="{{ 'registration.submit'|trans }}">
+                    Créer un compte &nbsp; <i class="fa fa-play-circle"></i>
+                </button>
+            </div>
+
+        </form>
+    </div> <!-- /.account-body -->
+
+    <div class="account-footer">
+        <p>
+            Vous possédez déjà un compte? &nbsp;
+            <a href="{{ path("fos_user_security_login") }}" class="">Connectez-vous!</a>
+        </p>
+    </div> <!-- /.account-footer -->
+
+</div> <!-- /.account-wrapper -->
+
+<script src="{{ asset('dashboard/js/libs/jquery-1.10.1.min.js')}}"></script>
+<script src="{{ asset('dashboard/js/libs/jquery-ui-1.9.2.custom.min.js')}}"></script>
+<script src="{{ asset('dashboard/js/libs/bootstrap.min.js')}}"></script>
+
+<!--[if lt IE 9]>
+<script src="{{ asset('dashboard/js/libs/excanvas.compiled.js')}}"></script>
+<![endif]-->
+<!-- App JS -->
+<script src="{{ asset('dashboard/js/target-admin.js')}}"></script>
+
+<!-- Plugin JS -->
+<script src="{{ asset('dashboard/js/target-account.js')}}"></script>
+
+
+
+
+
+
+</body>
+</html>

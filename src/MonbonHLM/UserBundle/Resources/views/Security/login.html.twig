@@ -4,22 +4,24 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-    <title>Login - Target Admin</title>
+    <title>MonbonHLM - Connexion</title>
 
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700">
     <link rel="stylesheet" href="{{ asset('dashboard/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('dashboard/js/libs/css/ui-lightness/jquery-ui-1.9.2.custom.min.css')}}">
     <link rel="stylesheet" href="{{ asset('dashboard/css/bootstrap.min.css')}}">
 
+    <link rel="icon" type="image/png" href="{{ asset('home/images/logo.png') }}"/>
+    <link rel=icon href=favicon.png sizes="16x16" type="{{ asset('home/images/logo.png')}}">
+    <link rel=icon href=iphone.png sizes="57x57" type="{{ asset('home/images/logo.png')}}">
+    <meta name=application-name content="MonbonHLM">
     <!-- App CSS -->
     <link rel="stylesheet" href="{{ asset('dashboard/css/target-admin.css')}}">
     <link rel="stylesheet" href="{{ asset('dashboard/css/custom.css')}}'">
-
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -28,12 +30,10 @@
     <![endif]-->
 </head>
 
-</div> <!-- /.navbar -->
-
 <div class="account-wrapper">
 
     <div class="account-logo">
-        <img src="./img/logo-login.png" alt="Target Admin">
+        <img src="{{ asset('home/images/Logo-banner.png') }}" style="width: 100%;" alt="MonbonHLM Connexion">
     </div>
 
     <div class="account-body">
@@ -56,7 +56,7 @@
 								</span>
                 </div>
                 <div class="form-group form-actions">
-                    <button type="submit" style="margin:auto;" class="btn btn-primary pull-right" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}">
+                    <button type="submit" style="margin:auto;" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}">
                         Connexion <i class="fa fa-arrow-circle-right"></i>
                     </button>
                 </div>

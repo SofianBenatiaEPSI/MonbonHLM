@@ -103,7 +103,7 @@ class AnnonceRepository extends EntityRepository
             ->setParameter('identifier', $id)
             ->getQuery();
         $query->setFirstResult(0);
-        return $query->getSingleResult();
+        return $query->getOneOrNullResult();
     }
 
 

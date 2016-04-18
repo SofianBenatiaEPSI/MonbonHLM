@@ -9,20 +9,26 @@
                 </div>
             </div>
 
+
             <div class="col-md-9 col-sm-12">
                 <ul class="header-widget">
                     {% if is_granted('ROLE_USER') %}
                     <li>
-                        <i class="sl sl-icon-login"></i>
+                        <i class="sl sl-icon-user" style="font-size: 20px; margin-top: 15px; padding-left: 20px;"></i>
                         <div class="widget-content">
-                            <span style="font-size: 20px;margin-top: 12px;" class="title"><a href="{{path ('fos_user_security_logout')}}">Se deconnecter</a></span>
+                            <span class="title" style="font-size: 15px;margin-top: 12px;"><a href="{{path ('fos_user_profile_show')}}">Mon compte</a></span>
+                        </div>
+                        </br>
+                        <i class="sl sl-icon-logout" style="font-size: 20px; margin-top: 15px; padding-left: 20px;"></i>
+                        <div class="widget-content">
+                            <span class="title" style="font-size: 15px;margin-top: 12px;"><a href="{{path ('fos_user_security_logout')}}">Déconnexion</a></span>
                         </div>
                     </li>
                     {% else %}
                     <li>
-                        <i class="sl sl-icon-login"></i>
+                        <i class="sl sl-icon-login" style="font-size: 20px; margin-top: 15px; padding-left: 20px;"></i>
                         <div class="widget-content">
-                            <span style="font-size: 20px;margin-top: 12px;" class="title"><a href="{{path ('fos_user_security_login')}}">Connexion</a></span>
+                            <span class="title" style="font-size: 15px;margin-top: 12px;"><a href="{{path ('fos_user_security_login')}}">Connexion</a></span>
                         </div>
                     </li>
                     {% endif %}

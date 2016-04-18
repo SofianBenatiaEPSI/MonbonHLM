@@ -29,12 +29,12 @@ class AnnonceType extends AbstractType {
             ->add('code_postal', 'entity', array('class'=>'MonbonHLMDashboardBundle:CodePostal', 'property' => 'code' ))
             ->add('etage', 'text', array('attr' => array('class' => 'etage')))
             ->add('numero_logement', 'text', array('attr'=> array('class'=> 'numero_logement')))
-            ->add('description_complementaire', 'textarea', array('attr'=> array('class'=> 'description_complementaire')))
+            ->add('description_complementaire', 'textarea', array('attr' => array('class' => 'ckeditor')))
             ->add('photo_principal', new PhotoPrincipalFormType(), array('label' => 'Photo principal du logement :'))
             ->add('photo_2', new Photo2FormType(), array('label' => 'Photo 2 du logement :'))
             ->add('photo_3', new Photo3FormType(), array('label' => 'Photo 3 du logement :'))
             ->add('type_logementrechercher', 'entity', array('class'=>'MonbonHLMDashboardBundle:TypeLogement', 'property' => 'type' ))
-            ->add('envoyer', 'submit');
+            ->add('envoyer', 'submit', array('attr' => array('class'=>'button')));
     }
 
     public function getName() {

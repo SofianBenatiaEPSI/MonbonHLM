@@ -52,6 +52,15 @@
                 </ul>
             </div>
         </div>
+    </div>
+
+        {% if userann is null %}
+            <div class="margin-top-50"></div>
+            <div class="notification notice closeable">
+                <p>Attention, vous n'avez posté aucune annonce ! <span><a href="{{path ('monbon_hlm_home_ajouter_annonce')}}">Ajouter une annonce</a></span></p>
+                <a class="close" href="#"></a>
+            </div>
+        {% else %}
         <div class="col-md-12" style="margin-top: 50px;">
             <div class="row">
                 <h4 class="headline with-border margin-bottom-20">Mon annonce</h4>
@@ -87,16 +96,23 @@
                 </div>
             </div>
         </div>
+        {% endif %}
         <div class="col-md-12" style="margin-top: 50px;">
             <div class="row">
                 <h4 class="headline with-border margin-bottom-20">Modifier</h4>
                 <ul class="services-list sticky">
                     <li><a href="{{path ('fos_user_profile_edit')}}">Modifier mon profil</a></li>
+                    <div class="margin-top-50"></div>
+
+                    {% if app.user.annonce.count is null and userann is null %}
                     <li><a href="{{ path('monbon_hlm_home_modifier_annonce', {'id':annonce  .id}) }}">Modifier mon annonce</a></li>
+                    <li><a href="{{ path('monbon_hlm_home_supprimer_annonce', {'id':annonce.id}) }}">Supprimer mon annonce</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
-    </div>
+    <div class="margin-top-50"></div>
+
 </div>
 
 

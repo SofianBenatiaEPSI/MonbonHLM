@@ -6,7 +6,7 @@
     <!-- Basic Page Needs
  ================================================== -->
     <meta charset="utf-8" />
-    <title>Annonces</title>
+    <title>MonbonHLM - Annonce</title>
     {% include "::base.html.twig" %}
 </head>
 
@@ -48,7 +48,7 @@
             <div class="col-md-4">
                 <div class="project-details sticky">
                     <h4 class="headline with-border">Annonce numéro {{ annonce.id }}</h4>
-                    <p>{{ annonce.descriptioncomplementaire }}</p>
+                    <p>{{ annonce.descriptioncomplementaire|raw }}</p>
 
                     <ul class="details">
                         <li><span>Référence locataire :</span>
@@ -71,6 +71,7 @@
                         <ul class="details">
                             <li><span>Nom :</span> {{ annonce.auteur.nom }}</li>
                             <li><span>Prenom :</span> {{ annonce.auteur.prenom }}</li>
+                            <li><span>Type de logement recherché :</span> {{ annonce.typelogementrechercher.type }}</li>
                             <li><a href="{{path ('monbon_hlm_home_envoyer_message_annonceur', {'id':annonce  .id}) }}" class="button border"><i class="fa fa-envelope"></i> Echanger !</a></li>
                         </ul>
                         {% endif %}

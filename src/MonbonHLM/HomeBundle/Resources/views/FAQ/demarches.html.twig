@@ -7,7 +7,7 @@
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8" />
-    <title>Accueil - MonbonHLM</title>
+    <title>MonbonHLM - Démarches</title>
     {% include "::base.html.twig" %}
 </head>
 
@@ -24,14 +24,13 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <h2>Quartier</h2>
-                    <span>Annonce disponible dans ces quartiers</span>
+                    <h2>Les démarches</h2>
 
                     <!-- Breadcrumbs -->
                     <nav id="breadcrumbs">
                         <ul>
-                            <li><a href="#">Accueils</a></li>
-                            <li>Quartiers</li>
+                            <li><a href="{{path ('monbon_hlm_home_homepage')}}">Accueils</a></li>
+                            <li>Démarches</li>
                         </ul>
                     </nav>
 
@@ -40,15 +39,49 @@
         </div>
     </div>
 
+    <!-- Content
+================================================== -->
+    <div class="container">
+        <div class="row sticky-wrapper">
+            <!-- Content -->
+            <div class="col-md-12 col-sm-12 sticky-wrapper extra-gutter-left">
+
+                <!-- Headline -->
+                <h3 class="headline small with-border">Les démarches administratives pour échanger votre appartement</h3>
 
 
+                <!-- Text & Photo -->
+                <div class="row margin-bottom-5">
+
+                    <!-- Text -->
+                    <div class="col-md-6">
+                        <p>A new coat of paint or new wall treatments are easy ways to refresh your home. We know what makes a great paint job. And it's our mission to deliver the level of detail and professionalism that you expect and deserve.</p>
+                        <ul class="list-1">
+                            <li>Complete interior and exterior painting Painting accents, base boards and trim.</li>
+                            <li>We can stain decks and walkways to protect them from the wear and tear of the weather.</li>
+                            <li>Painting doors by hand takes a lot of time. We have tools and skills to apply a quality paint job.</li>
+                        </ul>
+                        <div class="margin-top-40"></div>
+                        <div>
+                            <p>
+                                <a href="#" class="button medium border"><i class="fa fa-folder-open"></i> Télécharger le document d'échange</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Photo -->
+                    <div class="col-md-6">
+                        <a href="images/service-alt-01a.jpg" class="img-hover mfp-image margin-top-5" title="Some title"><img src="{{ asset('home/images/service-alt-01.jpg') }}" alt="" /></a>
+                    </div>
+
+                </div>
+                <div class="margin-top-50"></div>
 
 
+            </div>
 
-
-
-
-
+        </div>
+    </div>
 
     {% include "::footer.html.twig" %}
 

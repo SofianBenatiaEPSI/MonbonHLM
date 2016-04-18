@@ -109,8 +109,8 @@ h6 {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #e74c3c;
-  border-color: #df2e1b;
+  background-color: #007FDE;
+  border-color: #232323;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -118,8 +118,8 @@ h6 {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #df2e1b;
-  border-color: #a82315;
+  background-color: #026ebe;
+  border-color: #065c9d;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3080,29 +3080,14 @@ table.table thead .sorting_desc_disabled,
   margin-bottom: 1em;
 }
 .account-logo {
-  position: relative;
-  margin: 0 auto 25px;
-  z-index: 100;
-  width: 100px;
-  height: 100px;
-  background-color: #16a085;
+  width: 100%;
+  height: 100%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.account-logo::after {
-  content: '';
-  display: inline-block;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid transparent;
-  border-top-color: #16a085;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -10px;
-}
+
 .account-form {
   padding: 0;
   margin-top: 2em;
@@ -3119,6 +3104,7 @@ table.table thead .sorting_desc_disabled,
   margin-bottom: 1.25em;
 }
 .account-body {
+  margin-top: 20px;
   position: relative;
   padding: 35px 30px 10px;
   margin-bottom: 1em;
@@ -3151,7 +3137,7 @@ table.table thead .sorting_desc_disabled,
 @media (min-width: 768px) {
   .account-wrapper {
     width: 450px;
-    padding: 30px 0;
+    padding: 70px 0;
   }
   .account-wrapper .row > div {
     margin-bottom: 0;

@@ -7,7 +7,7 @@
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8" />
-    <title>Accueil - MonbonHLM</title>
+    <title>MonbonHLM - Questions - réponses</title>
     {% include "::base.html.twig" %}
 </head>
 
@@ -24,14 +24,13 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <h2>Quartier</h2>
-                    <span>Annonce disponible dans ces quartiers</span>
+                    <h2>Questions - Réponses</h2>
 
                     <!-- Breadcrumbs -->
                     <nav id="breadcrumbs">
                         <ul>
-                            <li><a href="#">Accueils</a></li>
-                            <li>Quartiers</li>
+                            <li><a href="{{path ('monbon_hlm_home_homepage')}}">Accueils</a></li>
+                            <li>Questions - réponses</li>
                         </ul>
                     </nav>
 
@@ -40,22 +39,41 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="headline with-border margin-bottom-30">Besoin de réponses à vos questions ? Cette page est faite pour vous !</h4>
 
+                <!-- Accordion -->
+                <div class="accordion">
 
+                    <!-- Section 1 -->
+                    <h3><span class="ui-accordion-header-icon ui-icon ui-accordion-icon"></span>Première question</h3>
+                    <div>
+                        <p>Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate aliquam egestas litora torquent conubia.</p>
+                    </div>
 
+                    <!-- Section 2 -->
+                    <h3><span class="ui-accordion-header-icon ui-icon ui-accordion-icon"></span>Seconde question</h3>
+                    <div>
+                        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. Nullam laoreet, velit ut taciti sociosqu condimentum feugiat.</p>
+                    </div>
 
+                    <!-- Section 3 -->
+                    <h3><span class="ui-accordion-header-icon ui-icon ui-accordion-icon"></span>Troisième question</h3>
+                    <div>
+                        <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper.</p>
+                    </div>
 
-
-
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin-top-50"></div>
     {% include "::footer.html.twig" %}
-
     <!-- Back To Top Button -->
     <div id="backtotop"><a href="#"></a></div>
-
-
     {% include "::scripts.html.twig" %}
-
-
 </div>
 <!-- Wrapper / End -->
 

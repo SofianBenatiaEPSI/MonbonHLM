@@ -29,7 +29,7 @@ class AnnonceEditType extends AbstractType {
             ->add('code_postal', 'entity', array('class'=>'MonbonHLMDashboardBundle:CodePostal', 'property' => 'code' ))
             ->add('etage', 'text', array('attr' => array('class' => 'etage')))
             ->add('numero_logement', 'text', array('attr'=> array('class'=> 'numero_logement')))
-            ->add('description_complementaire', 'textarea', array('attr'=> array('class'=> 'description_complementaire')))
+            ->add('description_complementaire', 'textarea', array('attr' => array('class' => 'ckeditor')))
             ->add('envoyer', 'submit');
     }
 

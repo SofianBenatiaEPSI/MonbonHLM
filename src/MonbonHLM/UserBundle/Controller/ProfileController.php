@@ -34,18 +34,24 @@ class ProfileController extends Controller
     public function showAction()
     {
         $user = $this->getUser();
+        $userann = 0;
         $em = $this->getDoctrine()->getManager();
         $annoncerepo = $em->getRepository('MonbonHLMDashboardBundle:Annonce');
 
         $annonceUserConnected = $annoncerepo->Auteurannonce($user->getId());
-        $userann = $annonceUserConnected->getId();
+        if($annonceUserConnected == null){
+            return $this->render('MonbonHLMUserBundle:Profile:show.html.twig',array(
+                'user' => $user,
+                'userann' => null));
+        }else{
 
-        return $this->render('MonbonHLMUserBundle:Profile:show.html.twig', array(
-            'user' => $user,
-            'userann' => $userann,
-            'annonce' => $annonceUserConnected
-        ));
-
+            $userann = $annonceUserConnected->getId();
+            return $this->render('MonbonHLMUserBundle:Profile:show.html.twig', array(
+                'user' => $user,
+                'userann' => $userann,
+                'annonce' => $annonceUserConnected
+            ));
+        }
     }
 
     /**
