@@ -1,9 +1,75 @@
-<form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" novalidate>
-    {{ form_rest(form) }}
-    <div class="form-actions">
-        <a class="btn btn-default" href="{{ path('monbon_hlm_home_homepage') }}">Annuler</a>
-        <button id="sdz_blogbundle_articleedittype" type="submit" class="btn btn-primary btn-large">
-            Envoyer
-        </button>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <title>MonbonHLM- Créer un compte</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{ asset('home/css/style.css')}}" />
+    <link rel="stylesheet" href="{{ asset('home/css/colors/blue.css')}}" id="colors" />
+    <link rel="icon" type="image/png" href="{{ asset('home/images/logo.png') }}"/>
+    <link rel=icon href=favicon.png sizes="16x16" type="{{ asset('home/images/logo.png')}}">
+    <link rel=icon href=iphone.png sizes="57x57" type="{{ asset('home/images/logo.png')}}">
+    <meta name=application-name content="MonbonHLM">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700">
+    <link rel="stylesheet" href="{{ asset('dashboard/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('dashboard/js/libs/css/ui-lightness/jquery-ui-1.9.2.custom.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('dashboard/css/bootstrap.min.css')}}">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="{{ asset('dashboard/css/target-admin.css')}}">
+    <link rel="stylesheet" href="{{ asset('dashboard/css/custom.css')}}">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<div class="account-wrapper">
+
+    <div class="account-logo">
+        <img src="{{ asset('home/images/Logo-banner.png') }}" style="max-width: 100%!important;" alt="MonbonHLM">
     </div>
-</form>
+
+
+    <div class="account-body">
+
+        <h3 class="account-body-title" style="font-size: 25px;">Modifier votre compte</h3>
+
+        <form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" novalidate>
+            {{ form_rest(form) }}
+                <div class="form-actions">
+                    <button id="sdz_blogbundle_articleedittype" type="submit" class="btn btn-primary btn-large">
+                        Envoyer
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div> <!-- /.account-body -->
+
+</div> <!-- /.account-wrapper -->
+
+<script src="{{ asset('dashboard/js/libs/jquery-1.10.1.min.js')}}"></script>
+<script src="{{ asset('dashboard/js/libs/jquery-ui-1.9.2.custom.min.js')}}"></script>
+<script src="{{ asset('dashboard/js/libs/bootstrap.min.js')}}"></script>
+
+<!--[if lt IE 9]>
+<script src="{{ asset('dashboard/js/libs/excanvas.compiled.js')}}"></script>
+<![endif]-->
+<!-- App JS -->
+<script src="{{ asset('dashboard/js/target-admin.js')}}"></script>
+
+<!-- Plugin JS -->
+<script src="{{ asset('dashboard/js/target-account.js')}}"></script>
+
+</body>
+</html>

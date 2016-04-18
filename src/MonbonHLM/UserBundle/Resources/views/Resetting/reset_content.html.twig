@@ -1,8 +1,62 @@
-{% trans_default_domain 'FOSUserBundle' %}
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <title>MonbonHLM - Nouveau mot de passe</title>
+    {% include "::base.html.twig" %}
+</head>
 
-{{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+    {% include "::menu.html.twig" %}
+    <div class="clearfix"></div>
+
+    <div id="titlebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Nouveau mot de passe</h2>
+
+                </div>
+            </div>
+        </div>
     </div>
-{{ form_end(form) }}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-1" style="text-align: center;">
+                {% trans_default_domain 'FOSUserBundle' %}
+
+                {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
+                {{ form_widget(form) }}
+                <div>
+                    <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="margin-top-50"></div>
+
+
+    {% include "::footer.html.twig" %}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+
+    {% include "::scripts.html.twig" %}
+
+</div>
+<!-- Wrapper / End -->
+
+</body>
+</html>
+

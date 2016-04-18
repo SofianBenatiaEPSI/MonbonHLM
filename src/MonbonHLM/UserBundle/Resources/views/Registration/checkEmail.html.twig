@@ -1,7 +1,60 @@
-{% extends "FOSUserBundle::layout.html.twig" %}
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <title>MonbonHLM - Inscription terminé</title>
+    {% include "::base.html.twig" %}
+</head>
 
-{% trans_default_domain 'FOSUserBundle' %}
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+    {% include "::menu.html.twig" %}
+    <div class="clearfix"></div>
 
-{% block fos_user_content %}
-    <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
-{% endblock fos_user_content %}
+    <div id="titlebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Inscription terminé !</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% trans_default_domain 'FOSUserBundle' %}
+                {% block fos_user_content %}
+                    <div class="notification success closeable">
+                        <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
+                        <a class="close" href="#"></a>
+                    </div>
+                {% endblock fos_user_content %}
+            </div>
+        </div>
+    </div>
+
+    <div class="margin-top-50"></div>
+
+
+    {% include "::footer.html.twig" %}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+
+    {% include "::scripts.html.twig" %}
+
+</div>
+<!-- Wrapper / End -->
+
+</body>
+</html>

@@ -1,14 +1,67 @@
-{% trans_default_domain 'FOSUserBundle' %}
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <title>MonbonHLM - Mot de passe oublié</title>
+    {% include "::base.html.twig" %}
+</head>
 
-<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
-    <div>
-        {% if invalid_username is defined %}
-            <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}</p>
-        {% endif %}
-        <label for="username">{{ 'resetting.request.username'|trans }}</label>
-        <input type="text" id="username" name="username" required="required" />
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+    {% include "::menu.html.twig" %}
+    <div class="clearfix"></div>
+
+    <div id="titlebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Mot de passe oublié ?</h2>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-1" style="text-align: center;">
+                {% trans_default_domain 'FOSUserBundle' %}
+
+                <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+                    <div>
+                        {% if invalid_username is defined %}
+                            <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}</p>
+                        {% endif %}
+                        <label for="username">{{ 'resetting.request.username'|trans }}</label>
+                        <input type="text" id="username" name="username" required="required" />
+                    </div>
+                    <div>
+                        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" />
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</form>
+
+    <div class="margin-top-50"></div>
+
+
+    {% include "::footer.html.twig" %}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+
+    {% include "::scripts.html.twig" %}
+
+</div>
+<!-- Wrapper / End -->
+
+</body>
+</html>

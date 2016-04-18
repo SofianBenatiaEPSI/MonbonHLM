@@ -46,61 +46,11 @@
         <h3 class="account-body-title" style="font-size: 25px;">Créez votre compte dès maintenant !</h3>
 
         <form class="form account-form" action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST">
+            {{ form_rest(form) }}
 
-            <div class="form-group">
-								<span class="input-icon">
-                                    <label for="username">Adresse email</label>
-									<input class="form-control" placeholder="Adresse email" {{ form_widget(form.email) }}
-									 </span>
-            </div>
-
-            <div class="form-group form-actions">
-								<span class="input-icon">
-                                    <label for="password">Nom d'utilisateur</label>
-									<input class="form-control" placeholder="Nom d'utilisateur" {{ form_widget(form.username) }}
-								</span>
-            </div>
-
-            <div class="form-group">
-								<span class="input-icon">
-                                    <label for="username">Mot de passe</label>
-									<input class="form-control" placeholder="Mot de passe" {{ form_widget(form.plainPassword.first) }}
-									 </span>
-            </div>
-
-            <div class="form-group form-actions">
-								<span class="input-icon">
-                                    <label for="password">Vérification du mot de passe</label>
-									<input class="form-control" placeholder="Retaper votre mot de passe" {{ form_widget(form.plainPassword.second) }}
-								</span>
-            </div>
-
-            <div class="form-group form-actions">
-								<span class="input-icon">
-                                    <label for="password">Nom</label>
-									<input class="form-control" placeholder="Nom" {{ form_widget(form.nom) }}
-								</span>
-            </div>
-
-            <div class="form-group form-actions">
-								<span class="input-icon">
-                                    <label for="password">Prénom</label>
-									<input class="form-control" placeholder="Prénom" {{ form_widget(form.prenom) }}
-								</span>
-            </div>
-
-            <div class="form-group form-actions">
-								<span class="input-icon">
-                                    <label for="password">Téléphone</label>
-									<input class="form-control" placeholder="Téléphone" {{ form_widget(form.telephone) }}
-								</span>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-secondary btn-block btn-lg" tabindex="6" value="{{ 'registration.submit'|trans }}">
-                    Créer un compte &nbsp; <i class="fa fa-play-circle"></i>
-                </button>
-            </div>
-
+            <button type="submit" class="btn btn-secondary btn-block btn-lg" tabindex="6" value="{{ 'registration.submit' }}">
+                Créer un compte &nbsp; <i class="fa fa-play-circle"></i>
+            </button>
         </form>
     </div> <!-- /.account-body -->
 
