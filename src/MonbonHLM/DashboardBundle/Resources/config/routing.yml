@@ -1,0 +1,20 @@
+
+monbon_hlm_admin_supprimer_annonce:
+    path:     /admin/supprimer-annonce/{id}
+    defaults: { _controller: MonbonHLMDashboardBundle:Annonce:Supprimer }
+
+monbon_hlm_admin_annonces:
+    path:     /admin-annonces/{page}
+    defaults: { _controller: MonbonHLMDashboardBundle:Annonce:Recuperer, page: 1 }
+
+monbon_hlm_admin_utilisateurs:
+    path:     /admin-utilisateurs/{page}
+    defaults: { _controller: MonbonHLMDashboardBundle:Utilisateurs:Recuperer, page: 1 }
+
+monbon_hlm_admin_supprimer_utilisateurs:
+    path:     /admin/supprimer-utilisateur/{id}
+    defaults: { _controller: MonbonHLMDashboardBundle:Utilisateurs:Supprimer }
+
+monbon_hlm_admin_ajouter_quartier:
+    path:     /admin/ajouter-quartier
+    defaults: { _controller: MonbonHLMDashboardBundle:Quartiers:Ajouter }

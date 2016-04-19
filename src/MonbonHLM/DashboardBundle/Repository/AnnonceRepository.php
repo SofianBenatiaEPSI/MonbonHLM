@@ -155,4 +155,14 @@ class AnnonceRepository extends EntityRepository
         $typelogement = parent::find($id);
         return $typelogement;
     }
+
+    public function Recupererannonceadmin($page=1, $maxperpage=30) {
+        $query = $this->createQueryBuilder('i')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
 }

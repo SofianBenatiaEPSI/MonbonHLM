@@ -6,14 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class FaqController extends Controller
 {
-    public function FonctionnementAction()
+    public function ConditionsAction()
     {
-        return $this->render('MonbonHLMHomeBundle:FAQ:fonctionnement.html.twig');
+        return $this->render('MonbonHLMHomeBundle:FAQ:conditions.html.twig');
     }
 
-    public function DemarchesAction()
+    public function MentionsAction()
     {
-        return $this->render('MonbonHLMHomeBundle:FAQ:demarches.html.twig');
+        return $this->render('MonbonHLMHomeBundle:FAQ:mentions.html.twig');
     }
 
     public function QuestionsreponsesAction()

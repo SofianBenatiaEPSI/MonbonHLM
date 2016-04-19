@@ -41,10 +41,6 @@ monbon_hlm_home_annonces_quartier:
     path:     /annonces-quartier/{id}
     defaults: { _controller: MonbonHLMHomeBundle:Annonce:Quartier, page: 1 }
 
-monbon_hlm_home_ajouter_quartier:
-    path:     /ajouter-quartier
-    defaults: { _controller: MonbonHLMHomeBundle:Quartier:Ajouter }
-
 
 ######################  TYPE DE LOGEMENTS  #####################################
 
@@ -76,13 +72,13 @@ monbon_hlm_home_annonces_bailleur:
 ######################  FAQ  #####################################
 
 
-monbon_hlm_home_fonctionnement:
-    path:     /fonctionnement
-    defaults: { _controller: MonbonHLMHomeBundle:Faq:Fonctionnement }
+monbon_hlm_home_conditions:
+    path:     /conditions-generales
+    defaults: { _controller: MonbonHLMHomeBundle:Faq:Conditions }
 
-monbon_hlm_home_demarches:
-    path:     /demarches
-    defaults: { _controller: MonbonHLMHomeBundle:Faq:Demarches }
+monbon_hlm_home_mentions-legales:
+    path:     /mentions-legales
+    defaults: { _controller: MonbonHLMHomeBundle:Faq:Mentions }
 
 monbon_hlm_home_questionsreponses:
     path:     /questions-reponses

@@ -104,10 +104,12 @@
                     <li><a href="{{path ('fos_user_profile_edit')}}">Modifier mon profil</a></li>
                     <div class="margin-top-50"></div>
 
-                    {% if app.user.annonce.count is null and userann is null %}
-                    <li><a href="{{ path('monbon_hlm_home_modifier_annonce', {'id':annonce  .id}) }}">Modifier mon annonce</a></li>
-                    <li><a href="{{ path('monbon_hlm_home_supprimer_annonce', {'id':annonce.id}) }}">Supprimer mon annonce</a></li>
+                    {% if userann is null %}
+                    {% else %}
+                        <li><a href="{{ path('monbon_hlm_home_modifier_annonce', {'id':annonce  .id}) }}">Modifier mon annonce</a></li>
+                        <li><a href="{{ path('monbon_hlm_home_supprimer_annonce', {'id':annonce.id}) }}">Supprimer mon annonce</a></li>
                     {% endif %}
+                    <div class="margin-top-30"></div>
                 </ul>
             </div>
         </div>

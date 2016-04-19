@@ -12,4 +12,23 @@ use Doctrine\ORM\EntityRepository;
  */
 class UtilisateursRepository extends EntityRepository
 {
+    public function RecupererUtilisateurs($page=1, $maxperpage=30) {
+        $query = $this->createQueryBuilder('i')
+            ->addOrderBy('i.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults($maxperpage);
+        $query->setFirstResult(($page-1) * $maxperpage)
+            ->setMaxResults($maxperpage);
+        return $query->getResult();
+    }
+
+    public function countUtilisateursTotal()
+    {
+        $qb = $this->createQueryBuilder('k');
+        $qb->select('count(k)');
+
+        $totaltypelogement = $qb->getQuery()->getSingleScalarResult();
+        return $totaltypelogement;
+    }
+
 }

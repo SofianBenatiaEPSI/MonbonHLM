@@ -39,8 +39,9 @@ security:
            - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
            - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
            - { path: ^/ajouter-annonce, role: ROLE_USER }
+           - { path: ^/profil*, role: ROLE_USER }
            - { path: ^/ajouter-quartier, role: ROLE_ADMIN }
-           - { path: ^/admin, role: ROLE_ADMIN }
+           - { path: ^/admin*, role: ROLE_ADMIN }
            - { path: ^/annonces, role: ROLE_USER }
            - { path: ^/annonce*, role: ROLE_USER }
 

@@ -8,3 +8,7 @@ monbon_hlm_home:
 monbonhlm_user:
     resource: "@MonbonHLMUserBundle/Resources/config/routing.yml"
     prefix:   /
+
+monbonhlm_dashboard:
+    resource: "@MonbonHLMDashboardBundle/Resources/config/routing.yml"
+    prefix:   /
