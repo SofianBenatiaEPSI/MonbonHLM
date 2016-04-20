@@ -89,13 +89,13 @@ class Annonce
 
     /**
      * @ORM\OneToOne(targetEntity="Photo2", cascade={"persist"})
-     * @ORM\JoinColumn(name="photo2", referencedColumnName="id")
+     * @ORM\JoinColumn(name="photo2", referencedColumnName="id", nullable=true)
      **/
     private $photo_2;
 
     /**
      * @ORM\OneToOne(targetEntity="Photo3", cascade={"persist"})
-     * @ORM\JoinColumn(name="photo3", referencedColumnName="id")
+     * @ORM\JoinColumn(name="photo3", referencedColumnName="id", nullable=true)
      **/
     private $photo_3;
 

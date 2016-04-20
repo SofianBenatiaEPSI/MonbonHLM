@@ -51,8 +51,7 @@
                     <p>{{ annonce.descriptioncomplementaire|raw }}</p>
 
                     <ul class="details">
-                        <li><span>Référence locataire :</span>
-                        </li>
+                        <li><span>Référence locataire :</span> {{ annonce.referencelocataire }}</li>
                         <li><span>Type de logement :</span> {{ annonce.typelogement.type }}</li>
                         <li><span>Adresse :</span> {{ annonce.adresse }}</li>
                         <li><span>Etage :</span> {{ annonce.etage }}</li>
@@ -72,7 +71,7 @@
                             <li><span>Nom :</span> {{ annonce.auteur.nom }}</li>
                             <li><span>Prenom :</span> {{ annonce.auteur.prenom }}</li>
                             <li><span>Type de logement recherché :</span> {{ annonce.typelogementrechercher.type }}</li>
-                            <li><a href="{{path ('monbon_hlm_home_envoyer_message_annonceur', {'id':annonce  .id}) }}" class="button border"><i class="fa fa-envelope"></i> Echanger !</a></li>
+                            <li><a href="{{path ('monbon_hlm_home_envoyer_message_annonceur', {'id':annonce  .id}) }}" onclick="return(confirm('Etes-vous sûr de vouloir envoyer une demande d\'échange?'));" class="button border"><i class="fa fa-envelope"></i> Echanger !</a></li>
                         </ul>
                         {% endif %}
                     {% else %}

@@ -33,7 +33,7 @@ class AnnonceType extends AbstractType {
             ->add('photo_principal', new PhotoPrincipalFormType(), array('label' => 'Photo principal du logement :'))
             ->add('photo_2', new Photo2FormType(), array('label' => 'Photo 2 du logement :'))
             ->add('photo_3', new Photo3FormType(), array('label' => 'Photo 3 du logement :'))
-            ->add('type_logementrechercher', 'entity', array('class'=>'MonbonHLMDashboardBundle:TypeLogement', 'property' => 'type' ))
+            ->add('type_logementrechercher', 'entity', array('class'=>'MonbonHLMDashboardBundle:TypeLogement', 'property' => 'type', 'label' => 'Type de logement rechercher' ))
             ->add('envoyer', 'submit', array('attr' => array('class'=>'button')));
     }
 

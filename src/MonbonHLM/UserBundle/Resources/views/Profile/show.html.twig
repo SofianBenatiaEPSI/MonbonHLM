@@ -107,7 +107,7 @@
                     {% if userann is null %}
                     {% else %}
                         <li><a href="{{ path('monbon_hlm_home_modifier_annonce', {'id':annonce  .id}) }}">Modifier mon annonce</a></li>
-                        <li><a href="{{ path('monbon_hlm_home_supprimer_annonce', {'id':annonce.id}) }}">Supprimer mon annonce</a></li>
+                        <li><a href="{{ path('monbon_hlm_home_supprimer_annonce', {'id':annonce.id}) }}" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette annonce?'));">Supprimer mon annonce</a></li>
                     {% endif %}
                     <div class="margin-top-30"></div>
                 </ul>

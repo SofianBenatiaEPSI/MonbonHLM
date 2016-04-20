@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <!-- Service -->
-                <a href="single-service-1.html" class="featured-service">
+                <a class="featured-service">
                     <i class="fa fa-envelope-o"></i>
                     <h4>Contactez</h4>
                     <p>Contacter l'annonceur, pour envoyer un message à l'annonceur.</p>
@@ -42,7 +42,7 @@
 
             <div class="col-md-4 col-sm-6">
                 <!-- Service -->
-                <a href="single-service-2.html" class="featured-service">
+                <a class="featured-service">
                     <i class="reneva icon-48"></i>
                     <h4>Demandez</h4>
                     <p>Remplissez le document disponible dans les bureaux de votre bailleur.</p>
@@ -51,7 +51,7 @@
 
             <div class="col-md-4 col-sm-6">
                 <!-- Service -->
-                <a href="single-service-1.html" class="featured-service">
+                <a class="featured-service">
                     <i class="reneva icon-16"></i>
                     <h4>Déménagez</h4>
                     <p>Échanger vos logement une fois l'accord de la comission !</p>
@@ -77,20 +77,28 @@
 
         <!-- Projects -->
         <div class="full-width projects">
-
-            {% for annonce in annonceaccTab %}
-                <!-- Item -->
-                <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}" class="kitchens clickable">
-                    <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" style="height: 200px;" alt="" />
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <h4>{{ annonce.quartier.nom }}</h4>
-                            <span>{{ annonce.typelogement.type }}</span>
-                        </div>
+            {% if annoncecount==0 %}
+                <div class="row">
+                    <div class="notification warning closeable">
+                        <p><span style="text-align: center;">Aucune annonce </span>disponible</p>
+                        <a class="close" href="#"></a>
                     </div>
-                    <div class="plus-icon"></div>
-                </a>
-            {% endfor %}
+                </div>
+            {% else %}
+                {% for annonce in annonceaccTab %}
+                    <!-- Item -->
+                    <a href="{{ path('monbon_hlm_home_details_annonces', {'id':annonce  .id}) }}" class="kitchens clickable">
+                        <img src="{{ asset('uploads/annonces/1/'~annonce.PhotoPrincipal.id~'.'~annonce.PhotoPrincipal.path) }}" style="height: 200px;" alt="" />
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h4>{{ annonce.quartier.nom }}</h4>
+                                <span>{{ annonce.typelogement.type }}</span>
+                            </div>
+                        </div>
+                        <div class="plus-icon"></div>
+                    </a>
+                {% endfor %}
+            {% endif %}
         </div>
 
         <div class="container">
@@ -111,18 +119,19 @@
                     <div class="testimonials-slider">
                         <ul class="slides">
                             <li>
-                                <p>I have already heard back about the internship I applied through Job Finder, that's the fastest job reply I've ever gotten and it's so much better than waiting weeks to hear back.
-                                    <span>Collis Ta’eed, Envato</span></p>
+                                <p> Mes enfants ont quitté mon domicile depuis 4 ans et je payais depuis un T4 avec mon petit salaire heureusement j'ai pu enfin faire échange avec une famille vivant à 4 dans un T3.
+                                    <span>Nora El hams</span></p>
                             </li>
 
                             <li>
-                                <p>Nam eu eleifend nulla. Duis consectetur sit amet risus sit amet venenatis. Pellentesque pulvinar ante a tincidunt placerat. Donec dapibus efficitur arcu, a rhoncus lectus egestas elementum.
-                                    <span>John Doe</span></p>
+                                <p> Si je n'avais pas vite trouvé un échange grâce à votre site, mon mari aurait continué à se disputer avec le voisin. Maintenant on vit tranquillement dans notre nouveau logement. Et paraît-il que le nouveau locataire s'est fait ami avec le voisin tant mieux.
+                                    <span>Veronique Laprune</span></p>
                             </li>
 
                             <li>
-                                <p>Maecenas congue sed massa et porttitor. Duis placerat commodo ex, ut faucibus est facilisis ac. Donec eleifend arcu sed sem posuere aliquet. Etiam lorem metus, suscipit vel tortor vitae.
-                                    <span>Tom Smith</span></p>
+                                <p>  Divorcée et sans véhicule, j'élève seule 3 adolescents. J'ai formulé une demande de mutation il y a 2 ans.
+                                    Mon organisme m’a proposé deux emplois à 15km de mon secteur, je ne pouvais donc pas accepter. Grâce à ce site j'ai pu trouver un locataire souhaitant échanger son logement avec moi. Bien qu’il soit au RDC, l'appartement est dans un super état et juste à côté du collège.
+                                    <span>Malika Hadjibou</span></p>
                             </li>
 
                         </ul>

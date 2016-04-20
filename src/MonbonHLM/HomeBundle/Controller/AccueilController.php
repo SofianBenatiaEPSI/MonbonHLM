@@ -8,6 +8,10 @@ class AccueilController extends Controller
 {
     public function RecupererAction()
     {
+        $annonce_count = $this->getDoctrine()
+            ->getRepository('MonbonHLMDashboardBundle:Annonce')
+            ->countAnnonceTotal();
+
         $annonce = $this->getDoctrine()->getRepository('MonbonHLMDashboardBundle:Annonce');
         $annonceaccTab = $annonce->Recupererannonceaccueil();
 
@@ -16,7 +20,9 @@ class AccueilController extends Controller
 
 
         return $this->render('MonbonHLMHomeBundle:Accueil:index.html.twig', array(
-            'annonceaccTab' => $annonceaccTab, 'bailleuraccTab' => $bailleuraccTab
+            'annonceaccTab' => $annonceaccTab,
+            'bailleuraccTab' => $bailleuraccTab,
+            'annoncecount' => $annonce_count
         ));
     }
 
