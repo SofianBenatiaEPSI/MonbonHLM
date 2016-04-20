@@ -14,7 +14,7 @@ class QuartierRepository extends EntityRepository
 {
     public function Recupererquartier($page=1, $maxperpage=30) {
         $query = $this->createQueryBuilder('i')
-            ->addOrderBy('i.id', 'ASC')
+            ->addOrderBy('i.nom', 'ASC')
             ->getQuery()
             ->setMaxResults($maxperpage);
         $query->setFirstResult(($page-1) * $maxperpage)
