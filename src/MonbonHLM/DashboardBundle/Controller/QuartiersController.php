@@ -5,6 +5,7 @@ namespace MonbonHLM\DashboardBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use MonbonHLM\DashboardBundle\Entity\Quartier;
 use MonbonHLM\DashboardBundle\Form\QuartierType;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class QuartiersController extends Controller
 {

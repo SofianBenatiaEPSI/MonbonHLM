@@ -12,9 +12,9 @@ use Doctrine\ORM\EntityRepository;
  */
 class QuartierRepository extends EntityRepository
 {
-    public function Recupererquartier($page=1, $maxperpage=6) {
+    public function Recupererquartier($page=1, $maxperpage=30) {
         $query = $this->createQueryBuilder('i')
-            ->addOrderBy('i.id', 'DESC')
+            ->addOrderBy('i.id', 'ASC')
             ->getQuery()
             ->setMaxResults($maxperpage);
         $query->setFirstResult(($page-1) * $maxperpage)

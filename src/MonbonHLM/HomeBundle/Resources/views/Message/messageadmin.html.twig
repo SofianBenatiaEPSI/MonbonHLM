@@ -1,13 +1,12 @@
+<html>
+
 Nouvelle demande d'échange :
 
-
-L'utilisateur {{ user.nom }} {{ user.prenom }} à demandé à échanger son bien :
-
+</br>
+L'utilisateur {{ user.nom }} {{ user.prenom }} à demandé à échanger son bien :</br>
 <a href="http://localhost:8888/MonbonHLM/web/app_dev.php/annonce-{{ userann }}" >Voir son annonce</a>
-
-
-
-Contre l'utilisateur {{ annonce.auteur.nom }} {{ annonce.auteur.prenom }}
-
-
+</br>
+</br>
+Contre l'utilisateur {{ annonce.auteur.nom }} {{ annonce.auteur.prenom }}</br>
 <a href="http://localhost:8888/MonbonHLM/web/app_dev.php/annonce-{{ annonce.id }}" >Voir son annonce</a>
+</html>

@@ -37,7 +37,7 @@ class QuartierController extends Controller
 
     public function IndexAction($page)
     {
-        $maxquartier = 9;
+        $maxquartier = 30;
 
         $quartier_count = $this->getDoctrine()
             ->getRepository('MonbonHLMDashboardBundle:Quartier')

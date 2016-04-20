@@ -45,15 +45,13 @@
     ================================================== -->
     <div class="container">
         <div class="row">
-
-            {% for quartier in quartierTab %}
                 <div class="container">
                     <div class="row">
-                        {% for quartiers in quartierTab %}
+                        {% for quartier in quartierTab %}
                             <div class="col-md-4 col-sm-6">
                                 <a href="{{path ('monbon_hlm_home_annonces_quartier', {'id':quartier  .id}) }}" class="project-category">
                                     <figure class="effect">
-                                        <img src="{{ asset('uploads/quartiers/'~quartier.photo.id~'.'~quartier.photo.path) }}" alt="img12" />
+                                        <img src="{{ asset('uploads/quartiers/'~quartier.photo.id~'.'~quartier.photo.path) }}" />
                                         <figcaption>
                                             <div>
                                                 <h3>{{ quartier.nom }}</h3>
@@ -65,8 +63,6 @@
                         {% endfor %}
                     </div>
                 </div>
-            {% endfor %}
-
         </div>
 
 
